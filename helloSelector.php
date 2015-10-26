@@ -1,6 +1,6 @@
-<a href="http://1204848-lab1.azurewebsites.net/helloPrinter.php?query=earth">Blarg</a>
-<a href="http://1204848-lab1.azurewebsites.net/helloPrinter.php?query=mars">Blarg</a>
-<a href="http://1204848-lab1.azurewebsites.net/helloPrinter.php?query=uranus">Blarg</a>
+<a href="http://1204848-lab1.azurewebsites.net/helloPrinter.php?query=earth">Earth</a>
+<a href="http://1204848-lab1.azurewebsites.net/helloPrinter.php?query=mars">Mars</a>
+<a href="http://1204848-lab1.azurewebsites.net/helloPrinter.php?query=uranus">Uranus</a>
 
 <?php
 /**
