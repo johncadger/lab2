@@ -11,4 +11,4 @@ $surname = $_POST["surname"];
 $dob = $_POST["dob"];
 $gender = $_POST["gender"];
 
-echo $forename . $surname . $dob . $gender;
+echo $forename . " aa " .  $surname . " bb " . $dob . " cc " . $gender;
