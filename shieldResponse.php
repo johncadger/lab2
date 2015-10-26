@@ -6,7 +6,7 @@
  * Time: 16:09
  */
 
-$forename = $_GET["forename"];
+$forename = $_POST["forename"];
 $surname = $_POST["surname"];
 $dob = $_POST["dob"];
 $gender = $_POST["gender"];
