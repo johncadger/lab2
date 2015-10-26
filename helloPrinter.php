@@ -6,4 +6,6 @@
  * Time: 15:40
  */
 
+$query = $_GET["query"];
+
 echo "Hello " . $query;
