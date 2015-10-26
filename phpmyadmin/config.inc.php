@@ -22,7 +22,7 @@ $cfg['hg65gd87hlo09s4'] = ''; /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */
 $i = 0;
 
 /**
- * First server
+ * 1st server
  */
 $i++;
 /* Authentication type */
