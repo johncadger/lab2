@@ -7,7 +7,7 @@
  */
 
 $forename = $_POST["forename"];
-$surname = $_POST["forename"];
+$surname = $_POST["surname"];
 $dob = $_POST["dob"];
 $gender = $_POST["gender"];
 
