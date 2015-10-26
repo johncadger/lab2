@@ -7,8 +7,8 @@
  */
 
 $forename = $_POST["forename"];
-$surname = $_POST["surname"];
+$surname = $_POST["forename"];
 $dob = $_POST["dob"];
 $gender = $_POST["gender"];
 
-echo $forename . " aa " .  $surname . " bb " . $dob . " cc " . $gender;
+echo $forename . " " .  $surname . " " . $dob . " " . $gender;
