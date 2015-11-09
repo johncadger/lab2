@@ -27,7 +27,7 @@ $result = $db->query($sql_query);
 // use fetch_array() to return an associative array
 while($row = $result->fetch_array()){
     // print out fields from row of data
-    echo $row['title'] . "/n";
+    echo "<p>" . $row['title'] . "/n" / "</p>";
 }
 
 $result->close();
