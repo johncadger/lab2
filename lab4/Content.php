@@ -20,6 +20,7 @@ if($db->connect_errno) {
 $topicID = $_GET["topicID"];
 
 $sectionIDArray = array();
+$sectionNameArray = array();
 
 // create a SQL query as a string
 $sql_query_ID = "SELECT sectionID FROM sectionText WHERE topicID LIKE $topicID";
@@ -35,6 +36,12 @@ for($i = 0; $i < $row = $result_ID->fetch_array(); $i++){
     // print out fields from row of data
     $sectionIDArray[$i] = $row['sectionID'];
     echo $sectionIDArray[$i];
+}
+
+for($i = 0; $i < $row = $result_name->fetch_array(); $i++){
+    // print out fields from row of data
+    $sectionNameArray[$i] = $row['sectionName'];
+    echo $sectionNameArray[$i];
 }
 
 $result->close();
