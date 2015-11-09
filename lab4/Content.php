@@ -19,30 +19,25 @@ if($db->connect_errno) {
 
 $topicID = $_GET["topicID"];
 
-$sectionIDArray = array();
+$sectionIDArray = array(1,"a");
 $sectionNameArray = array();
 
 // create a SQL query as a string
-$sql_query_ID = "SELECT sectionID FROM sectionText WHERE topicID LIKE $topicID";
 $sql_query_name = "SELECT sectionName FROM sectionText WHERE topicID LIKE $topicID";
 
 // execute the SQL query
-$result_ID = $db->query($sql_query_ID);
 $result_name = $db->query($sql_query_name);
 
 // iterate over $result object one $row at a time
 // use fetch_array() to return an associative array
-for($i = 0; $i < $row = $result_ID->fetch_array(); $i++){
-    // print out fields from row of data
-    $sectionIDArray[$i] = $row['sectionID'];
-    echo $sectionIDArray[$i];
+for($i = 0; $i < $row = $result_name->fetch_array(); $i++){
+        // print out fields from row of data
+        $sectionNameArray[$i] = $row['sectionName'];
+        echo $sectionNameArray[$i];
 }
 
-for($i = 0; $i < $row = $result_name->fetch_array(); $i++){
-    // print out fields from row of data
-    $sectionNameArray[$i] = $row['sectionName'];
-    echo $sectionNameArray[$i];
-}
+
+
 
 $result->close();
 // close connection to database
