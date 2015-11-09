@@ -18,7 +18,7 @@ if($db->connect_errno) {
 }
 
 // create a SQL query as a string
-$sql_query = "SELECT * FROM superheroes WHERE superpower LIKE '%laser%'";
+$sql_query = "SELECT * FROM marvelMovies WHERE yearReleased LIKE 2003";
 
 // execute the SQL query
 $result = $db->query($sql_query);
