@@ -18,7 +18,7 @@ $ID = 2;
 </head>
 <body>
 <nav>
-    <p><a href=\"/profile.php>Home</a></p>
+    <p><a href=/profile.php>Home</a></p>
     <?
     $sql_query_name = "SELECT title FROM marvelmovies where marvelMovieID = $ID";
     $result = $db->query($sql_query_name);
