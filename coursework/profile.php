@@ -5,8 +5,9 @@
  * Date: 30/11/2015
  * Time: 16:27
  */
-$username = "a";
-$country = "b";
+
+include ("db_connect.php");
+$ID = 2;
 ?>
 
 <!DOCTYPE html>
@@ -19,11 +20,18 @@ $country = "b";
 <nav>
     <p>lanslfa</p>
     <?
-    //$sql_query = "SELECT * FROM User where userID = $_COOKIE['user']";
-    //$result = $db->query($sql_query);
-    //while($row = $result->fetch_array()){
-    //    echo "<li><a href=\"Adventure.php?adventureID=". $row['adventureID']."\">".$row['adventureName']."</a>";
-    //}
+    $sql_query_name = "SELECT title FROM marvelmovies where marvelMovieID = $ID";
+    $result = $db->query($sql_query_name);
+    while($row = $result->fetch_array()){
+        echo "Name: ".$row['title'];
+    }
+    ?>
+    <?
+    $sql_query_country = "SELECT productionStudio FROM marvelmovies where marvelMovieID = $ID";
+    $result = $db->query($sql_query_country);
+    while($row = $result->fetch_array()){
+        echo $row['productionStudio'];
+    }
     ?>
 
 
@@ -47,10 +55,10 @@ $country = "b";
 ?>
 <main>
     <header>
-        <h1><? echo $username ?></h1>
+        <h1><? echo "something" ?></h1>
     </header>
 </main>
 <section>
-    <p><? echo $country ?></p>
+    <p><? echo "else" ?></p>
 </section>
 
