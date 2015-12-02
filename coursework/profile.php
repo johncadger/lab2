@@ -36,7 +36,7 @@ $ID = 2;
 
 
     <?
-    $sql_query_adventures = "SELECT * FROM sections where topicID = $user";
+    $sql_query_adventures = "SELECT * FROM sections where topicID = $ID";
     $result = $db->query($sql_query_adventures);
     while($row = $result->fetch_array()){
         echo "<li><a href=\"Adventure.php?adventureID=". $row['sectionID']."\">".$row['sectionName']."</a>";
