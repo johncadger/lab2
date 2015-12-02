@@ -36,11 +36,11 @@ $ID = 2;
 
 
     <?
-    //$sql_query = "SELECT * FROM Adventures where userID = $user";
-    //$result = $db->query($sql_query);
-    //while($row = $result->fetch_array()){
-    //    echo "<li><a href=\"Adventure.php?adventureID=". $row['adventureID']."\">".$row['adventureName']."</a>";
-    //}
+    $sql_query_adventures = "SELECT * FROM sections where topicID = $user";
+    $result = $db->query($sql_query_adventures);
+    while($row = $result->fetch_array()){
+        echo "<li><a href=\"Adventure.php?adventureID=". $row['sectionID']."\">".$row['sectionName']."</a>";
+    }
     ?>
 </nav>
 <?
