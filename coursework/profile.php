@@ -23,14 +23,14 @@ $ID = 2;
     $sql_query_name = "SELECT title FROM marvelmovies where marvelMovieID = $ID";
     $result = $db->query($sql_query_name);
     while($row = $result->fetch_array()){
-        echo "Name: ".$row['title'];
+        echo "<li>Name: ".$row['title'];
     }
     ?>
     <?
     $sql_query_country = "SELECT productionStudio FROM marvelmovies where marvelMovieID = $ID";
     $result = $db->query($sql_query_country);
     while($row = $result->fetch_array()){
-        echo $row['productionStudio'];
+        echo "<li>Country: ".$row['productionStudio'];
     }
     ?>
 
