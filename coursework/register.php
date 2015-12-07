@@ -31,9 +31,10 @@ include ("db_connect.php");
     $name = $_POST["name"];
 
     //Get userID.
-    $sql_query_getID = "SELECT * FROM marvelmovies";
+    $sql_query_getID = "SELECT COUNT(marvelMovieID) FROM marvelmovies";
     $result = $db->query($sql_query_getID);
-    echo mysql_num_rows($result);
+    $userID = $result + 1;
+    echo $userID;
 
     //Insert information into database.
 
