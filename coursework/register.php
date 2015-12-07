@@ -33,7 +33,9 @@ include ("db_connect.php");
     //Get userID.
     $sql_query_getID = "SELECT COUNT(marvelMovieID) FROM marvelmovies";
     $result = $db->query($sql_query_getID);
-    $userID = $result;
+    while($row = $result->fetch_array()){
+        $userID ++;
+    }
     echo $userID;
 
     //Insert information into database.
