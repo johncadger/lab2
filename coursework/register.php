@@ -34,7 +34,7 @@ include ("db_connect.php");
     $sql_query_getID = "COUNT(marvelMovieID) FROM marvelmovies";
     $result = $db->query($sql_query_getID);
     while($row = $result->fetch_array()){
-        $row = $userID;
+        $result = $userID;
     }
     echo $userID;
 
