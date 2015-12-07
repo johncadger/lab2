@@ -36,6 +36,7 @@ include ("db_connect.php");
     while($row = $result->fetch_array()){
         $userID++;
     }
+    $userID +=1;
     echo $userID;
 
     //Insert information into database.
