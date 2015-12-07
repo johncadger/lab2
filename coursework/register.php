@@ -31,10 +31,10 @@ include ("db_connect.php");
     $name = $_POST["name"];
 
     //Get userID.
-    $sql_query_getID = "SELECT marvelMovieID FROM marvelmovies";
+    $sql_query_getID = "COUNT(marvelMovieID) FROM marvelmovies";
     $result = $db->query($sql_query_getID);
     while($row = $result->fetch_array()){
-        $userID ++;
+        $row = $userID;
     }
     echo $userID;
 
