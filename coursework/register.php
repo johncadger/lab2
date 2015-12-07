@@ -24,6 +24,26 @@ include ("db_connect.php");
         <label>Name<input type= "text" name= "name"></label>
         <label><input type= "submit" value= "Submit"></label>
     </form>
+    <?
+    $login = $_POST["login"];
+    $password = $_POST["password"];
+    $country = $_POST["country"];
+    $name = $_POST["name"];
+
+    //Get userID.
+    $sql_query_getID = "SELECT COUNT(marvelMovieID) FROM marvelmovies";
+    $result = $db->query($sql_query_getID);
+    $userID = $result +1;
+    echo $userID;
+
+    //Insert information into database.
+
+
+
+    //Store current userID in SESSION.
+
+    ?>
+
 </nav>
 <main>
     <header>
