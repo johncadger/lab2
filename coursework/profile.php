@@ -7,6 +7,7 @@
  */
 
 include ("db_connect.php");
+//$_SESSION['userID'] where $ID is used.
 $ID = 2;
 ?>
 
@@ -18,8 +19,10 @@ $ID = 2;
 </head>
 <body>
 <nav>
+    <?//Link to homepage.?>
     <p><a href=/coursework/profile.php>Home</a></p>
     <?
+    //Getting name of user from database based on userID.
     $sql_query_name = "SELECT title FROM marvelmovies where marvelMovieID = $ID";
     $result = $db->query($sql_query_name);
     while($row = $result->fetch_array()){
@@ -27,15 +30,15 @@ $ID = 2;
     }
     ?>
     <?
+    //Getting user's country from database based on userID.
     $sql_query_country = "SELECT productionStudio FROM marvelmovies where marvelMovieID = $ID";
     $result = $db->query($sql_query_country);
     while($row = $result->fetch_array()){
         echo "<li>Country: ".$row['productionStudio'];
     }
     ?>
-
-
     <?
+    //Creating list of adventure links using userID.
     $sql_query_adventures = "SELECT * FROM sections where topicID = $ID";
     $result = $db->query($sql_query_adventures);
     while($row = $result->fetch_array()){
@@ -43,16 +46,6 @@ $ID = 2;
     }
     ?>
 </nav>
-<?
-
-//$userName = $_GET[$userName];
-//$mainQuery = "SELECT * FROM sectionText where sectionID = '$sectionID'";
-//$mainResult = $db->query($mainQuery);
-//while($row = $mainResult->fetch_array()) {
-//    $sectionName = $row['sectionName'];
-//    $sectionText = $row['text'];
-//}
-?>
 <main>
     <header>
         <h1><? echo "something" ?></h1>
