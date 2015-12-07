@@ -45,6 +45,8 @@ include ("db_connect.php");
 
     //Store current userID in SESSION.
 
+    $_SESSION['userID'] = $userID;
+
     ?>
 
 </nav>
