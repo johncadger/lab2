@@ -8,13 +8,9 @@
 
 include ("db_connect.php");
 
-$login = $_POST["login"];
-$password = $_POST["password"];
-$country = $_POST["country"];
-$name = $_POST["name"];
-$userID = $_SESSION['userID'];
-
 $query = $_GET['query'];
+
+$loginExists = 0;
 
 $sql_query_checkLogin = "SELECT title FROM marvelmovies where yearReleased = $login";
 $result = $db->query($sql_query_checkLogin);
@@ -22,18 +18,33 @@ while($row = $result->fetch_array()){
     $loginExists++;
 }
 
-if($query = "register"){
+if ($query = "register"){
+    $login = $_POST["login"];
+    $password = $_POST["password"];
+    $country = $_POST["country"];
+    $name = $_POST["name"];
+
+    //Get userID.
+    $sql_query_getID = "SELECT * FROM marvelmovies";
+    $result = $db->query($sql_query_getID);
+    while($row = $result->fetch_array()){
+        $userID++;
+    }
+    $userID +=1;
+
     if($loginExists > 0){
-        header('Location: register.php?query=exists');
+        header('Location: register.php?p_query=exists');
     }
     else{
         //Insert information into database.
         //$sql_query_insertUser = "INSERT INTO marvelmovies(marvelMovieID, yearReleased, title, productionStudio, notes) VALUES ($userID, $login, $password, $country, $name)";
         //$db->query($sql_query_insertUser);
+        //$_SESSION['userID'] = $userID;
     }
 }
-
-if($query = "login"){
+elseif($query = "login"){
+    $login = $_POST["login"];
+    $password = $_POST["password"];
     if($loginExists > 0){
         $sql_query_findID = "SELECT * FROM marvelmovies where yearReleased = $login";
         $result = $db->query($sql_query_findID);
@@ -43,6 +54,6 @@ if($query = "login"){
         header('Location: profile.php');
     }
     else{
-        header('Location: register.php?query=invalid');
+        header('Location: register.php?p_query=invalid');
     }
 }

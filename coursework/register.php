@@ -24,6 +24,7 @@ include ("db_connect.php");
         <label>Name<input type= "text" name= "name"></label>
         <label><input type= "submit" value= "Submit"></label>
     </form>
+
     <form action= "process.php?query=login" method= "post">
         <label>Login<input type= "text" name= "login"></label>
         <label>Password<input type= "text" name= "password"></label>
@@ -31,30 +32,16 @@ include ("db_connect.php");
     </form>
     <?
 
-    $loginExists = "";
-
-    $query = $_GET['query'];
+    $query = $_GET['p_query'];
     if ($query = "exists"){
         echo "Login already exists!";
     }
     elseif($query = "invalid"){
         echo "Login invalid!";
     }
-
-
-    //Get userID.
-    $sql_query_getID = "SELECT * FROM marvelmovies";
-    $result = $db->query($sql_query_getID);
-    while($row = $result->fetch_array()){
-        $userID++;
+    else{
+        echo "Hi!";
     }
-    $userID +=1;
-    echo $userID;
-
-    //Store current userID in SESSION.
-
-    $_SESSION['userID'] = $userID;
-    echo $_SESSION['userID'];
 
     ?>
 
