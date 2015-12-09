@@ -12,6 +12,7 @@ $login = $_POST["login"];
 $password = $_POST["password"];
 $country = $_POST["country"];
 $name = $_POST["name"];
+$userID = $_SESSION['userID'];
 
 $query = $_GET['query'];
 
@@ -21,4 +22,14 @@ while($row = $result->fetch_array()){
     $loginExists++;
 }
 
-echo $loginExists;
+if($query = "register"){
+    if($loginExists > 0){
+        header('Location: register.php?query=exists');
+    }
+    else{
+        //Insert information into database.
+        $sql_query_insertUser = "INSERT INTO marvelmovies
+        VALUES ($userID,$login,$password,$country,$name);";
+        $db->query($sql_query_insertUser);
+    }
+}
