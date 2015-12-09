@@ -28,7 +28,7 @@ if($query = "register"){
     }
     else{
         //Insert information into database.
-        $sql_query_insertUser = "INSERT INTO marvelmovies(marvelMovieID, yearReleased, title, productionStudio, notes) VALUES ($userID, $login, $password, $country, $type)";
+        $sql_query_insertUser = "INSERT INTO marvelmovies(marvelMovieID, yearReleased, title, productionStudio, notes) VALUES ($userID, $login, $password, $country, $name)";
         $db->query($sql_query_insertUser);
     }
 }
