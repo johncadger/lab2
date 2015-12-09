@@ -21,4 +21,4 @@ while($row = $result->fetch_array()){
     $loginExists++;
 }
 
-echo $login;
+echo $loginExists;
