@@ -12,6 +12,9 @@ $query = $_GET['query'];
 
 $loginExists = 0;
 
+$login = $_POST["login"];
+$password = $_POST["password"];
+
 $sql_query_checkLogin = "SELECT title FROM marvelmovies where yearReleased = $login";
 $result = $db->query($sql_query_checkLogin);
 while($row = $result->fetch_array()){
@@ -19,8 +22,6 @@ while($row = $result->fetch_array()){
 }
 
 if ($query = "register"){
-    $login = $_POST["login"];
-    $password = $_POST["password"];
     $country = $_POST["country"];
     $name = $_POST["name"];
 
@@ -43,8 +44,6 @@ if ($query = "register"){
     }
 }
 elseif($query = "login"){
-    $login = $_POST["login"];
-    $password = $_POST["password"];
     if($loginExists > 0){
         $sql_query_findID = "SELECT * FROM marvelmovies where yearReleased = $login";
         $result = $db->query($sql_query_findID);
