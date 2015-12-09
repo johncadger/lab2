@@ -15,15 +15,10 @@ $name = $_POST["name"];
 
 $query = $_GET['query'];
 
-$sql_query_checkLogin = "SELECT * FROM marvelmovies";
+$sql_query_checkLogin = "SELECT * FROM marvelmovies WHERE yearReleased = $login";
 $result = $db->query($sql_query_checkLogin);
 while($row = $result->fetch_array()){
-    if($row['yearReleased']=$login){
-        $loginExists = "true";
-    }
-    else{
-        echo "Available!";
-    }
+    echo $row['title'];
 }
 
-echo $loginExists;
+//echo $loginExists;
