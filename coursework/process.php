@@ -35,9 +35,11 @@ if($query = "register"){
 
 if($query = "login"){
     if($loginExists > 0){
-        $sql_query_findID = "SELECT marvelMovieID FROM marvelmovies where yearReleased = $login";
+        $sql_query_findID = "SELECT * FROM marvelmovies where yearReleased = $login";
         $result = $db->query($sql_query_findID);
-        $_SESSION['userID'] = $result;
+        while($row = $sql_query_findID->fetch_array()) {
+            $_SESSION['userID'] = $row['marvelMovieID'];
+        }
         header('Location: profile.php');
     }
     else{
