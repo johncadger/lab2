@@ -40,8 +40,9 @@ include ("db_connect.php");
     echo $userID;
 
     //Insert information into database.
-
-
+    $sql_query_insertUser = "INSERT INTO Category
+    VALUES ($userID,'1983','ksmkng','ab','a');";
+    $db->query($sql_query_insertUser);
 
     //Store current userID in SESSION.
 
