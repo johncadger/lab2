@@ -28,14 +28,17 @@ if($query = "register"){
     }
     else{
         //Insert information into database.
-        $sql_query_insertUser = "INSERT INTO marvelmovies(marvelMovieID, yearReleased, title, productionStudio, notes) VALUES ($userID, $login, $password, $country, $name)";
-        $db->query($sql_query_insertUser);
+        //$sql_query_insertUser = "INSERT INTO marvelmovies(marvelMovieID, yearReleased, title, productionStudio, notes) VALUES ($userID, $login, $password, $country, $name)";
+        //$db->query($sql_query_insertUser);
     }
 }
 
 if($query = "login"){
     if($loginExists > 0){
-
+        $sql_query_findID = "SELECT marvelMovieID FROM marvelmovies where yearReleased = $login";
+        $result = $db->query($sql_query_findID);
+        $_SESSION['userID'] = $result;
+        header('Location: profile.php');
     }
     else{
         header('Location: register.php?query=invalid');

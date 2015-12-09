@@ -24,6 +24,11 @@ include ("db_connect.php");
         <label>Name<input type= "text" name= "name"></label>
         <label><input type= "submit" value= "Submit"></label>
     </form>
+    <form action= "process.php?query=login" method= "post">
+        <label>Login<input type= "text" name= "login"></label>
+        <label>Password<input type= "text" name= "password"></label>
+        <label><input type= "submit" value= "Submit"></label>
+    </form>
     <?
 
     $loginExists = "";
@@ -31,6 +36,9 @@ include ("db_connect.php");
     $query = $_GET['query'];
     if ($query = "exists"){
         echo "Login already exists!";
+    }
+    elseif($query = "invalid"){
+        echo "Login invalid!";
     }
 
 
