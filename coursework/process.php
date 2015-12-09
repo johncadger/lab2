@@ -18,7 +18,7 @@ $query = $_GET['query'];
 $sql_query_checkLogin = "SELECT title FROM marvelmovies where yearReleased = $login";
 $result = $db->query($sql_query_checkLogin);
 while($row = $result->fetch_array()){
-    echo $row['title'];
+    $loginExists++;
 }
 
-//echo $loginExists;
+echo $loginExists;
