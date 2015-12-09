@@ -32,16 +32,6 @@ include ("db_connect.php");
     </form>
     <?
 
-    $query = $_GET['p_query'];
-    if ($query = "exists"){
-        echo "Login already exists!";
-    }
-    elseif($query = "invalid"){
-        echo "Login invalid!";
-    }
-    else{
-        echo "Hi!";
-    }
 
     ?>
 

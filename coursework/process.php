@@ -34,7 +34,7 @@ if ($query = "register"){
     $userID +=1;
 
     if($loginExists > 0){
-        header('Location: register.php?p_query=exists');
+        header('Location: register.php');
     }
     else{
         //Insert information into database.
@@ -53,6 +53,6 @@ elseif($query = "login"){
         header('Location: profile.php');
     }
     else{
-        header('Location: register.php?p_query=invalid');
+        header('Location: register.php');
     }
 }
