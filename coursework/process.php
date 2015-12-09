@@ -15,9 +15,7 @@ $name = $_POST["name"];
 
 $query = $_GET['query'];
 
-echo $login;
-
-$sql_query_checkLogin = "SELECT * FROM marvelmovies WHERE yearReleased = '2002'";
+$sql_query_checkLogin = "SELECT title FROM marvelmovies where yearReleased = $login";
 $result = $db->query($sql_query_checkLogin);
 while($row = $result->fetch_array()){
     echo $row['title'];
