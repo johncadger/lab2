@@ -18,7 +18,7 @@ $query = $_GET['query'];
 $sql_query_checkLogin = "SELECT * FROM marvelmovies";
 $result = $db->query($sql_query_checkLogin);
 while($row = $result->fetch_array()){
-    $userID++;
+    $loginExists++;
 }
 
-echo $userID;
+echo $loginExists;

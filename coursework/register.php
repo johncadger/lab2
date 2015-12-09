@@ -26,6 +26,8 @@ include ("db_connect.php");
     </form>
     <?
 
+    $loginExists = 0;
+
     $query = $_GET['query'];
     if ($query = "exists"){
         echo "Login already exists!";
