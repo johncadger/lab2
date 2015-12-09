@@ -15,20 +15,10 @@ $name = $_POST["name"];
 
 $query = $_GET['query'];
 
-$sql_query_checkLogin = "SELECT * FROM marvelmovies WHERE yearReleased = $login";
+$sql_query_checkLogin = "SELECT * FROM marvelMovies where yearReleased = $login";
 $result = $db->query($sql_query_checkLogin);
 while($row = $result->fetch_array()){
     $loginExists++;
 }
 
-if($query = "register"){
-    if($loginExists > 0){
-        header('Location: register.php?query=exists');
-    }
-    else{
-        //Insert information into database.
-        $sql_query_insertUser = "INSERT INTO Category
-        VALUES ($userID,$login,$password,$country,$name);";
-        $db->query($sql_query_insertUser);
-    }
-}
+echo $loginExists;
