@@ -15,12 +15,10 @@ $name = $_POST["name"];
 
 $query = $_GET['query'];
 
-$loginExists = 0;
-
-$sql_query_checkLogin = "SELECT * FROM marvelmovies where yearReleased = $login";
+$sql_query_checkLogin = "SELECT * FROM marvelmovies";
 $result = $db->query($sql_query_checkLogin);
 while($row = $result->fetch_array()){
-    $loginExists++;
+    $userID++;
 }
 
-echo $loginExists;
+echo $userID;
