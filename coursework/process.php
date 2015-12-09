@@ -6,6 +6,8 @@
  * Time: 11:49
  */
 
+include ("db_connect.php");
+
 $login = $_POST["login"];
 $password = $_POST["password"];
 $country = $_POST["country"];
