@@ -28,8 +28,17 @@ if($query = "register"){
     }
     else{
         //Insert information into database.
-        $sql_query_insertUser = "INSERT INTO marvelmovies
-        VALUES ($userID,$login,$password,$country,$name);";
+        $sql_query_insertUser = "INSERT INTO marvelmovies VALUES ($userID, $login, $password, $country, $type)";
+
         $db->query($sql_query_insertUser);
+    }
+}
+
+if($query = "login"){
+    if($loginExists > 0){
+
+    }
+    else{
+        header('Location: register.php?query=invalid');
     }
 }
