@@ -17,7 +17,7 @@ include ("db_connect.php");
 </head>
 <body>
 <nav>
-    <form action= "profile.php" method= "post">
+    <form action= "process.php?query=register" method= "post">
         <label>Login<input type= "text" name= "login"></label>
         <label>Password<input type= "text" name= "password"></label>
         <label>Country<input type= "text" name= "country"></label>
@@ -25,10 +25,7 @@ include ("db_connect.php");
         <label><input type= "submit" value= "Submit"></label>
     </form>
     <?
-    $login = $_POST["login"];
-    $password = $_POST["password"];
-    $country = $_POST["country"];
-    $name = $_POST["name"];
+
 
     //Get userID.
     $sql_query_getID = "SELECT * FROM marvelmovies";
@@ -40,9 +37,9 @@ include ("db_connect.php");
     echo $userID;
 
     //Insert information into database.
-    $sql_query_insertUser = "INSERT INTO Category
-    VALUES ($userID,$login,$password,$country,$name);";
-    $db->query($sql_query_insertUser);
+    //$sql_query_insertUser = "INSERT INTO Category
+    //VALUES ($userID,$login,$password,$country,$name);";
+    //$db->query($sql_query_insertUser);
 
     //Store current userID in SESSION.
 
