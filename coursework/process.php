@@ -23,10 +23,10 @@ while($row = $result->fetch_array()){
 
 echo $login." ".$loginExists." ".$query;
 
-if($query = "register"){
+if($query == "register"){
     echo "register"." ".$query;
 }
-elseif($query = "login"){
+elseif($query == "login"){
     echo "login"." ".$query;
 }
 
