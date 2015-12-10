@@ -28,7 +28,7 @@ echo $_SESSION['userID'];
     $sql_query_name = "SELECT name FROM Users where user_id = $ID";
     $result = $db->query($sql_query_name);
     while($row = $result->fetch_array()){
-        echo "<li>Name: ".$row['name'];
+        echo "Name: ".$row['name'];
     }
     ?>
     <?
@@ -36,7 +36,7 @@ echo $_SESSION['userID'];
     $sql_query_country = "SELECT country FROM Users where user_id = $ID";
     $result = $db->query($sql_query_country);
     while($row = $result->fetch_array()){
-        echo "<li>Country: ".$row['country'];
+        echo "Country: ".$row['country'];
     }
     ?>
     <?
@@ -48,12 +48,4 @@ echo $_SESSION['userID'];
     }
     ?>
 </nav>
-<main>
-    <header>
-        <h1><? echo "something" ?></h1>
-    </header>
-</main>
-<section>
-    <p><? echo "else" ?></p>
-</section>
 

@@ -17,6 +17,9 @@ include ("db_connect.php");
 </head>
 <body>
 <nav>
+    <?//Link to homepage.?>
+    <p><a href=/coursework/register.php>Home</a></p>
+
     <p>Register</p>
     <form action= "process.php?query=register" method= "post">
         <label>Login<input type= "text" name= "login"></label>
