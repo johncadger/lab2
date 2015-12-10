@@ -63,10 +63,12 @@ elseif($query == "login"){
         if ($passwordExists > 0){
             header('Location: profile.php');
         }
+        else{
+            header('Location: register.php');
+        }
     }
     else{
-        echo $loginExists." "."login";
-        //header('Location: register.php');
+        header('Location: register.php');
     }
 }
 
