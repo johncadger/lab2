@@ -50,9 +50,10 @@ elseif($query == "login"){
         $sql_query_findID = "SELECT * FROM Users where login = '$login'";
         $result = $db->query($sql_query_findID);
         while($row = $sql_query_findID->fetch_array()) {
-            $_SESSION['userID'] = $row['user_id'];
+            $userID = $row['user_id'];
         }
-        header('Location: profile.php');
+        echo $userID;
+        //header('Location: profile.php');
     }
     else{
         echo $loginExists." "."login";
