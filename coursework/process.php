@@ -15,7 +15,7 @@ $loginExists = 0;
 $login = $_POST["login"];
 $password = $_POST["password"];
 
-$sql_query_checkLogin = "SELECT * FROM Users where login LIKE $login";
+$sql_query_checkLogin = "SELECT * FROM Users where login LIKE '$login'";
 $result = $db->query($sql_query_checkLogin);
 while($row = $result->fetch_array()){
     $loginExists++;
