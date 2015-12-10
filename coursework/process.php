@@ -21,4 +21,9 @@ while($row = $result->fetch_array()){
     $loginExists++;
 }
 
-echo $loginExists;
+if ($loginExists > 0){
+    echo $loginExists;
+}
+else{
+    echo "none";
+}
