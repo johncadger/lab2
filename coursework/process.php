@@ -47,12 +47,8 @@ if ($query == "register"){
 }
 elseif($query == "login"){
     if($loginExists > 0){
-        $sql_query_findID = "SELECT * FROM Users where login = '$login'";
-        $result = $db->query($sql_query_findID);
-        while($row = $sql_query_findID->fetch_array()) {
-            $userID = $row['user_id'];
-        }
-        echo $userID;
+
+        echo $login;
         //header('Location: profile.php');
     }
     else{
