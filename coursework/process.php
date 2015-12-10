@@ -52,8 +52,7 @@ elseif($query == "login"){
         while($row = $result->fetch_array()) {
             $userID = $row['user_id'];
         }
-        echo $userID;
-        //header('Location: profile.php');
+        header('Location: profile.php');
     }
     else{
         echo $loginExists." "."login";
