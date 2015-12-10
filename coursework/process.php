@@ -15,7 +15,7 @@ $loginExists = 0;
 $login = $_POST["login"];
 $password = $_POST["password"];
 
-$sql_query_checkLogin = "SELECT title FROM marvelmovies where yearReleased LIKE $login";
+$sql_query_checkLogin = "SELECT * FROM marvelmovies where yearReleased LIKE $login";
 $result = $db->query($sql_query_checkLogin);
 while($row = $result->fetch_array()){
     $loginExists++;
