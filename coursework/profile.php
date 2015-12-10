@@ -24,18 +24,18 @@ echo $_SESSION['userID'];
     <p><a href=/coursework/profile.php>Home</a></p>
     <?
     //Getting name of user from database based on userID.
-    $sql_query_name = "SELECT title FROM marvelmovies where marvelMovieID = $ID";
+    $sql_query_name = "SELECT name FROM Users where user_id = $ID";
     $result = $db->query($sql_query_name);
     while($row = $result->fetch_array()){
-        echo "<li>Name: ".$row['title'];
+        echo "<li>Name: ".$row['name'];
     }
     ?>
     <?
     //Getting user's country from database based on userID.
-    $sql_query_country = "SELECT productionStudio FROM marvelmovies where marvelMovieID = $ID";
+    $sql_query_country = "SELECT country FROM Users where user_id = $ID";
     $result = $db->query($sql_query_country);
     while($row = $result->fetch_array()){
-        echo "<li>Country: ".$row['productionStudio'];
+        echo "<li>Country: ".$row['country'];
     }
     ?>
     <?
