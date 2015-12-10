@@ -26,7 +26,8 @@ if ($query = 'register'){
     $name = $_POST["name"];
 
     if($loginExists > 0){
-        header('Location: register.php');
+        echo "register"." ".$loginExists." ".$login;
+        //header('Location: register.php');
     }
     else{
         //Get userID.
