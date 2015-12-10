@@ -21,8 +21,6 @@ while($row = $result->fetch_array()){
     $loginExists++;
 }
 
-echo $login." ".$loginExists." ".$query;
-
 if ($query == "register"){
     $country = $_POST["country"];
     $name = $_POST["name"];
