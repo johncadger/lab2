@@ -14,22 +14,10 @@ include ("db_connect.php");
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <?
-
-    if (!empty($_POST['register'])) {
-        echo $_POST['login'];
-    }
-
-    if (!empty($_POST['signin'])) {
-        echo $_POST['login'];
-    }
-
-
-    ?>
 </head>
 <body>
 <nav>
-    <form name= "register" method= "post">
+    <form action= "process.php?query=register" method= "post">
         <label>Login<input type= "text" name= "login"></label>
         <label>Password<input type= "text" name= "password"></label>
         <label>Country<input type= "text" name= "country"></label>
@@ -37,12 +25,15 @@ include ("db_connect.php");
         <label><input type= "submit" value= "Submit"></label>
     </form>
 
-    <form name= "signin" method= "post">
+    <form action= "process.php?query=login" method= "post">
         <label>Login<input type= "text" name= "login"></label>
         <label>Password<input type= "text" name= "password"></label>
         <label><input type= "submit" value= "Submit"></label>
     </form>
+    <?
 
+
+    ?>
 
 </nav>
 <main>
