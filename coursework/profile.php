@@ -28,17 +28,17 @@ echo $_SESSION['userID'];
     $sql_query_name = "SELECT name FROM Users where user_id = $ID";
     $result = $db->query($sql_query_name);
     while($row = $result->fetch_array()){
-        echo "Name: ".$row['name'];
+        echo "<p>Name: ".$row['name'];
     }
-    ?>
-    <?
+
     //Getting user's country from database based on userID.
     $sql_query_country = "SELECT country FROM Users where user_id = $ID";
     $result = $db->query($sql_query_country);
     while($row = $result->fetch_array()){
-        echo "Country: ".$row['country'];
+        echo "<p>Country: ".$row['country'];
     }
     ?>
+    <p>Adventures:</p>
     <?
     //Creating list of adventure links using userID.
     $sql_query_adventures = "SELECT * FROM sections where topicID = $ID";
