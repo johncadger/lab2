@@ -17,18 +17,20 @@ include ("db_connect.php");
 </head>
 <body>
 <nav>
+    <p>Register</p>
     <form action= "process.php?query=register" method= "post">
         <label>Login<input type= "text" name= "login"></label>
         <label>Password<input type= "text" name= "password"></label>
         <label>Country<input type= "text" name= "country"></label>
         <label>Name<input type= "text" name= "name"></label>
-        <label><input type= "submit" value= "Submit"></label>
+        <label>Register<input type= "submit" value= "Submit"></label>
     </form>
 
+    <p>Login</p>
     <form action= "process.php?query=login" method= "post">
         <label>Login<input type= "text" name= "login"></label>
         <label>Password<input type= "text" name= "password"></label>
-        <label><input type= "submit" value= "Submit"></label>
+        <label>Login<input type= "submit" value= "Submit"></label>
     </form>
     <?
     $error = $_GET["error"];
@@ -46,13 +48,5 @@ include ("db_connect.php");
     ?>
 
 </nav>
-<main>
-    <header>
-        <h1><? echo "something" ?></h1>
-    </header>
-</main>
-<section>
-    <p><? echo "else" ?></p>
-</section>
 
 
