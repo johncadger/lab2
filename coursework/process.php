@@ -31,7 +31,7 @@ if ($query == "register"){
     }
     else{
         //Get userID.
-        $sql_query_getID = "SELECT * FROM Users where login LIKE '$login'";
+        $sql_query_getID = "SELECT * FROM Users";
         $result = $db->query($sql_query_getID);
         while($row = $result->fetch_array()){
             $userID++;
