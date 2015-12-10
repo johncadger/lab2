@@ -8,7 +8,7 @@
 
 include ("db_connect.php");
 
-$query = $_GET['query'];
+$query = $_GET["query"];
 
 $loginExists = 0;
 
