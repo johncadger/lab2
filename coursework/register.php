@@ -14,6 +14,18 @@ include ("db_connect.php");
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <?
+
+    if (!empty($_POST['register'])) {
+        echo $_POST['login'];
+    }
+
+    if (!empty($_POST['signin'])) {
+        echo $_POST['login'];
+    }
+
+
+    ?>
 </head>
 <body>
 <nav>
@@ -30,18 +42,7 @@ include ("db_connect.php");
         <label>Password<input type= "text" name= "password"></label>
         <label><input type= "submit" value= "Submit"></label>
     </form>
-    <?
 
-    if (!empty($_POST['register'])) {
-        echo $_POST['login'];
-    }
-
-    if (!empty($_POST['signin'])) {
-        echo $_POST['login'];
-    }
-
-
-    ?>
 
 </nav>
 <main>
