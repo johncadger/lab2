@@ -21,7 +21,7 @@ while($row = $result->fetch_array()){
     $loginExists++;
 }
 
-if ($query = "register"){
+if ($query = 'register'){
     $country = $_POST["country"];
     $name = $_POST["name"];
 
@@ -44,7 +44,7 @@ if ($query = "register"){
 
     }
 }
-elseif($query = "login"){
+elseif($query = 'login'){
     if($loginExists > 0){
         $sql_query_findID = "SELECT * FROM Users where login = '$login'";
         $result = $db->query($sql_query_findID);
