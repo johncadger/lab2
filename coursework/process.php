@@ -11,6 +11,7 @@ include ("db_connect.php");
 $query = $_GET["query"];
 
 $loginExists = 0;
+$passwordExists = 0;
 
 $login = $_POST["login"];
 $password = $_POST["password"];
@@ -47,12 +48,21 @@ if ($query == "register"){
 }
 elseif($query == "login"){
     if($loginExists > 0){
+
         $sql_query_findID = "SELECT * FROM Users where login = '$login'";
         $result = $db->query($sql_query_findID);
         while($row = $result->fetch_array()) {
             $userID = $row['user_id'];
         }
-        header('Location: profile.php');
+
+        $sql_query_checkPassword = "SELECT * FROM Users where user_id = '$userID' and password = '$password'";
+        $result = $db->query($sql_query_checkPassword);
+        while($row = $result->fetch_array()){
+            $passwordExists++;
+        }
+        if ($passwordExists > 0){
+            header('Location: profile.php');
+        }
     }
     else{
         echo $loginExists." "."login";
