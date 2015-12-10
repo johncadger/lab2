@@ -32,7 +32,15 @@ include ("db_connect.php");
     </form>
     <?
     $error = $_GET["error"];
-    echo $error;
+    if($error == "exists"){
+        echo "Login already exists!";
+    }
+    elseif($error == "login"){
+        echo "Invalid login!";
+    }
+    elseif($error == "password"){
+        echo "Invalid password!";
+    }
 
 
     ?>
