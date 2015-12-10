@@ -54,7 +54,8 @@ elseif($query = "login"){
         header('Location: profile.php');
     }
     else{
-        header('Location: register.php');
+        echo $loginExists." ".$login;
+        //header('Location: register.php');
     }
 }
 
