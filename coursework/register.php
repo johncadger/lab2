@@ -23,14 +23,14 @@ include ("db_connect.php");
         <label>Password<input type= "text" name= "password"></label>
         <label>Country<input type= "text" name= "country"></label>
         <label>Name<input type= "text" name= "name"></label>
-        <label>Register<input type= "submit" value= "Submit"></label>
+        <label><input type= "submit" value= "Submit"></label>
     </form>
 
     <p>Login</p>
     <form action= "process.php?query=login" method= "post">
         <label>Login<input type= "text" name= "login"></label>
         <label>Password<input type= "text" name= "password"></label>
-        <label>Login<input type= "submit" value= "Submit"></label>
+        <label><input type= "submit" value= "Submit"></label>
     </form>
     <?
     $error = $_GET["error"];
