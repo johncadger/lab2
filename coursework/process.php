@@ -27,7 +27,7 @@ if ($query == "register"){
     $name = $_POST["name"];
 
     if($loginExists > 0){
-        header('Location: register.php');
+        header('Location: register.php?error=exists');
     }
     else{
         //Get userID.
@@ -63,11 +63,11 @@ elseif($query == "login"){
             header('Location: profile.php');
         }
         else{
-            header('Location: register.php');
+            header('Location: register.php?error=password');
         }
     }
     else{
-        header('Location: register.php');
+        header('Location: register.php?error=login');
     }
 }
 

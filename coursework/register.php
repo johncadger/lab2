@@ -31,6 +31,8 @@ include ("db_connect.php");
         <label><input type= "submit" value= "Submit"></label>
     </form>
     <?
+    $error = $_GET["error"];
+    echo $error;
 
 
     ?>
