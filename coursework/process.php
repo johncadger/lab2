@@ -21,6 +21,8 @@ while($row = $result->fetch_array()){
     $loginExists++;
 }
 
+echo $_POST['login'], $_POST['password'];
+
 if ($loginExists > 0){
     echo $loginExists;
 }
