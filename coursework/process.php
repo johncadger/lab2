@@ -29,10 +29,10 @@ if($query == "register"){
 elseif($query == "login"){
     echo "login"." ".$query;
     if($loginExists > 0){
-        echo "valid";
+        echo " valid";
     }
     else{
-        echo "does not exist";
+        echo " does not exist";
     }
 }
 
