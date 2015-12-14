@@ -54,6 +54,8 @@ elseif($query == "login"){
             $userID = $row['user_id'];
         }
 
+        $_SESSION['userID'] = $userID;
+
         $sql_query_checkPassword = "SELECT * FROM Users where user_id = '$userID' and password = '$password'";
         $result = $db->query($sql_query_checkPassword);
         while($row = $result->fetch_array()){
