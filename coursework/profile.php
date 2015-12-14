@@ -21,8 +21,16 @@ $ID = $_GET["ID"];
 <nav>
     <?//Link to homepage.?>
     <p><a href=/coursework/Index.php>Home</a></p>
+    <?//Link to panel.?>
     <p><a href=/coursework/Panel.php>Edit Profile</a></p>
     <?
+
+    //$sql_query_type = "SELECT * FROM Users where user_id = $ID and type = 'administrator'";
+    //$result = $db->query($sql_query_name);
+    //while($row = $result->fetch_array()){
+    //    echo "<p><a href=\"Admin.php". "\">"."</a>";
+    //}
+
     //Getting name of user from database based on userID.
     $sql_query_name = "SELECT name FROM Users where user_id = $ID";
     $result = $db->query($sql_query_name);
