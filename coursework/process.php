@@ -39,9 +39,9 @@ if ($query == "register"){
         $userID +=1;
         $_SESSION['userID'] = $userID;
         //Insert information into database.
-        //$sql_query_insertUser = "INSERT INTO marvelmovies(marvelMovieID, yearReleased, title, productionStudio, notes) VALUES ($userID, $login, $password, $country, $name)";
-        //$db->query($sql_query_insertUser);
-        echo $_SESSION['userID'];
+        $sql_query_insertUser = "INSERT INTO Users(user_id, login, password, type, country, name, verified, last_login) VALUES ($userID, $login, $password, 'reader', $country, $name, false, '12-09-2015')";
+        $db->query($sql_query_insertUser);
+        header('Location: profile.php');
 
     }
 }
