@@ -7,7 +7,7 @@
  */
 
 include ("db_connect.php");
-//$_SESSION['userID'] where $ID is used.
+//user_id stored in local variable.
 $ID = $_GET["ID"];
 ?>
 
