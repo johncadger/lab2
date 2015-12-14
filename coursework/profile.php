@@ -42,10 +42,10 @@ echo $_SESSION['userID'];
     <p>Adventures:</p>
     <?
     //Creating list of adventure links using userID.
-    $sql_query_adventures = "SELECT * FROM sections where topicID = $ID";
+    $sql_query_adventures = "SELECT * FROM Adventure where user_ID = $ID";
     $result = $db->query($sql_query_adventures);
     while($row = $result->fetch_array()){
-        echo "<li><a href=\"Adventure.php?adventureID=". $row['sectionID']."\">".$row['sectionName']."</a>";
+        echo "<li><a href=\"Adventure.php?adventureID=". $row['adventure_id']."\">".$row['title']."</a>";
     }
     ?>
 </nav>
