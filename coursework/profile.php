@@ -8,7 +8,7 @@
 
 include ("db_connect.php");
 //$_SESSION['userID'] where $ID is used.
-$_SESSION['userID'] = $ID;
+$ID = $_SESSION['userID'];
 ?>
 
 <!DOCTYPE html>
