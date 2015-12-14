@@ -39,7 +39,7 @@ if ($query == "register"){
         $userID +=1;
         $_SESSION['userID'] = $userID;
         //Insert information into database.
-        $sql_query_insertUser = "INSERT INTO Users(user_id, login, password, type, country, name, verified, last_login) VALUES ($userID, $login, $password, 'reader', $country, $name, false, '12-09-2015')";
+        $sql_query_insertUser = "INSERT INTO Users(user_id, login, password, type, country, name, verified, last_login) VALUES ($userID, $login, $password, 'reader', $country, $name, false, '2015-12-14')";
         $db->query($sql_query_insertUser);
         header('Location: profile.php');
 

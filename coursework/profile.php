@@ -22,7 +22,8 @@ echo $_SESSION['userID'];
 <body>
 <nav>
     <?//Link to homepage.?>
-    <p><a href=/coursework/profile.php>Home</a></p>
+    <p><a href=/coursework/Index.php>Home</a></p>
+    <p><a href=/coursework/Panel.php>Edit Profile</a></p>
     <?
     //Getting name of user from database based on userID.
     $sql_query_name = "SELECT name FROM Users where user_id = $ID";
