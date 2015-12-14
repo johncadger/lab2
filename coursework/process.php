@@ -41,7 +41,7 @@ if ($query == "register"){
         //Insert information into database.
         $sql_query_insertUser = "INSERT INTO Users(user_id, login, password, type, country, name, verified, last_login) VALUES ($userID, $login, $password, 'reader', $country, $name, false, '2015-12-14')";
         $db->query($sql_query_insertUser);
-        header('Location: profile.php');
+        header('Location: profile.php?ID='.$userID);
 
     }
 }
@@ -54,7 +54,6 @@ elseif($query == "login"){
             $userID = $row['user_id'];
         }
 
-        $_SESSION['userID'] = $userID;
 
         $sql_query_checkPassword = "SELECT * FROM Users where user_id = '$userID' and password = '$password'";
         $result = $db->query($sql_query_checkPassword);
