@@ -35,8 +35,12 @@ function shortenString($array){
 
 shortenString($days_of_week);
 
-setcookie('count',0);
 
-++$_COOKIE['count'];
+if (!isset($_COOKIE['count'])){
+    setcookie('count',1);
+}
+else{
+    ++$_COOKIE['count'];
+}
 
 echo $_COOKIE['count'];
