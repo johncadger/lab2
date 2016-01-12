@@ -40,7 +40,8 @@ if (!isset($_COOKIE['count'])){
     setcookie('count',1);
 }
 else{
-    ++$_COOKIE['count'];
+    $cookie = ++$_COOKIE['count'];
+    setcookie('count',$cookie);
 }
 
 echo $_COOKIE['count'];
