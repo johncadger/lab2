@@ -9,10 +9,10 @@ $juice = 'apple';
 echo "i drank some $juice juice<br />";
 echo 'i drank some $juice juice <br />';
 
-//$a = 0;
-//$b = &$a;
-//$b++;
-//echo '$a == ', $a, '<br />';
+$a = 0;
+$b = &$a;
+$b++;
+echo '$a == ', $a, '<br />';
 
 //$arr = array('one','two','three','four','stop','five');
 //while (list(, $val) = each($arr)){
