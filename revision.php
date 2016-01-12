@@ -37,7 +37,8 @@ shortenString($days_of_week);
 
 
 if (!isset($_COOKIE['count'])){
-    setcookie('count',1);
+    $cookie = 1;
+    setcookie('count',$cookie);
 }
 else{
     $cookie = ++$_COOKIE['count'];
