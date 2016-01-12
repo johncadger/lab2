@@ -32,3 +32,5 @@ function shortenString($days_of_week){
         echo substr($i,0,3);
     }
 }
+
+shortenString($days_of_week);
