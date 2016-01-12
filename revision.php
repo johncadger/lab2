@@ -34,3 +34,9 @@ function shortenString($array){
 }
 
 shortenString($days_of_week);
+
+setcookie('count',0);
+
+++$_COOKIE['count'];
+
+echo $_COOKIE['count'];
