@@ -14,11 +14,21 @@
 //$b++;
 //echo '$a == ', $a, '<br />';
 
-$arr = array('one','two','three','four','stop','five');
-while (list(, $val) = each($arr)){
-    if ($val == 'stop'){
-        break 1;
-    }
-    echo "$val<br />\n";
-}
+//$arr = array('one','two','three','four','stop','five');
+//while (list(, $val) = each($arr)){
+//    if ($val == 'stop'){
+//        break 1;
+//    }
+//    echo "$val<br />\n";
+//}
 
+$days_of_week = array(
+    "monday", "tuesday", "wednesday", "thursday",
+    "friday", "saturday", "sunday"
+);
+
+function shortenString($days_of_week){
+    foreach($days_of_week as $i){
+        echo substr($i,0,3);
+    }
+}
