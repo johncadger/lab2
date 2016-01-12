@@ -27,8 +27,8 @@ $days_of_week = array(
     "friday", "saturday", "sunday"
 );
 
-function shortenString($days_of_week){
-    foreach($days_of_week as $i){
+function shortenString($array){
+    foreach($array as $i){
         echo substr($i,0,3);
     }
 }
