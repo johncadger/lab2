@@ -65,7 +65,7 @@ function name_of_coins($cents){
     );
     foreach($coins_of_usa as $i){
         if($cents == $i)
-            $cents = $i;
+            $cents = $coins_of_usa[$i];
     }
 }
 
