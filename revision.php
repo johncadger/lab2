@@ -63,9 +63,9 @@ function name_of_coins($cents){
         1=>"penny", 5=>"nickel", 10=>"dime",
         25=>"quarter", 50=>"half dollar", 100=>"dollar"
     );
-    foreach($coins_of_usa as $i){
+    foreach($coins_of_usa as $i => $i_value){
         if($cents == $i)
-            $cents = $coins_of_usa[$i];
+            $cents = $i;
     }
 }
 
