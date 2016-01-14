@@ -67,10 +67,14 @@ function name_of_coins($cents){
         if($cents == $i) {
             $cents = $i_value;
         }
+        else{
+            $cents = "no matching coin";
+        }
+
     }
 }
 
-$input = 5;
+$input = 6;
 
 name_of_coins($input);
 
