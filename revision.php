@@ -64,13 +64,12 @@ function name_of_coins($cents){
         25=>"quarter", 50=>"half dollar", 100=>"dollar"
     );
     foreach($coins_of_usa as $i => $i_value){
-        if($cents == $i) {
+        if($cents == $i){
             $cents = $i_value;
         }
         else{
             $cents = "no matching coin";
         }
-
     }
 }
 
