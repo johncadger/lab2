@@ -58,23 +58,31 @@ if($x===1)
 else
     echo "False <br />";
 
-function name_of_coins($cents){
-    static $coins_of_usa = array(
-        1=>"penny", 5=>"nickel", 10=>"dime",
-        25=>"quarter", 50=>"half dollar", 100=>"dollar"
-    );
-    foreach($coins_of_usa as $i => $i_value){
-        if($cents == $i){
-            $cents = $i_value;
-        }
-        else{
-            $cents = "no matching coin";
-        }
-    }
+//function name_of_coins($cents){
+//    static $coins_of_usa = array(
+//        1=>"penny", 5=>"nickel", 10=>"dime",
+//        25=>"quarter", 50=>"half dollar", 100=>"dollar"
+//    );
+//    foreach($coins_of_usa as $i => $i_value){
+//        if($cents == $i){
+//            $cents = $i_value;
+//            return $cents;
+//        }
+//    }
+//}
+
+//$input = 6;
+
+//$coin = name_of_coins($input);
+
+//echo $coin;
+
+function do_something(&$arg){
+    $retval = $arg;
+    $arg = $arg +1;
+    return $retval;
 }
 
-$input = 6;
-
-name_of_coins($input);
-
-echo $input;
+$a = 3;
+$b = do_something($a);
+echo $a," ",$b;
