@@ -18,6 +18,8 @@
 #Sidebar{
     float: right;
     background-color: blue;
+    padding-left: 7em;
+    text-align: center;
 }
 
 #PageFooter{
