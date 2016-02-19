@@ -9,3 +9,7 @@
 #SiteNavigation{
     background-color: gold;
 }
+
+#Sidebar{
+    float: right;
+}
