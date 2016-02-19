@@ -10,6 +10,10 @@
     background-color: gold;
 }
 
+#PageContent{
+    float: left;
+}
+
 #Sidebar{
     float: right;
 }
