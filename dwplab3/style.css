@@ -19,6 +19,8 @@
     float: right;
     background-color: blue;
     padding-left: 7em;
+}
+#Sidebar p{
     text-align: center;
 }
 
