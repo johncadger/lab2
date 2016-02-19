@@ -18,7 +18,7 @@
 #Sidebar{
     float: right;
     background-color: blue;
-    padding-left: 7em;
+    width: 25%;
 }
 #Sidebar p{
     text-align: center;
