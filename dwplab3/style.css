@@ -12,10 +12,12 @@
 
 #PageContent{
     float: left;
+    background-color: red;
 }
 
 #Sidebar{
     float: right;
+    background-color: blue;
 }
 
 #PageFooter{
