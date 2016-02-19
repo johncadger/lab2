@@ -17,3 +17,7 @@
 #Sidebar{
     float: right;
 }
+
+#PageFooter{
+    clear: both;
+}
