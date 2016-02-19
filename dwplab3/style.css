@@ -8,6 +8,7 @@
 
 #SiteNavigation{
     background-color: gold;
+    margin-right: 942px;
 }
 
 #PageContent{
@@ -18,7 +19,7 @@
 #Sidebar{
     float: right;
     background-color: blue;
-    width: 25%;
+    width: 20%;
 }
 #Sidebar p{
     text-align: center;
