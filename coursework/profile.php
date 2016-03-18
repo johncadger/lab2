@@ -6,7 +6,9 @@
  * Time: 16:27
  */
 
+//Connection to database
 include ("db_connect.php");
+
 //user_id stored in local variable.
 $ID = $_GET["ID"];
 ?>
@@ -24,12 +26,6 @@ $ID = $_GET["ID"];
     <?//Link to panel.?>
     <p><a href=/coursework/Panel.php>Edit Profile</a></p>
     <?
-
-    //$sql_query_type = "SELECT * FROM Users where user_id = $ID and type = 'administrator'";
-    //$result = $db->query($sql_query_name);
-    //while($row = $result->fetch_array()){
-    //    echo "<p><a href=\"Admin.php". "\">"."</a>";
-    //}
 
     //Getting name of user from database based on userID.
     $sql_query_name = "SELECT name FROM Users where user_id = $ID";
