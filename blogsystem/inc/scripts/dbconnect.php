@@ -10,7 +10,7 @@ $db = new mysqli(
     "br-cdbr-azure-south-a.cloudapp.net",
     "b8ed5106a0388c",
     "54abfd2d",
-    "blogsystem"
+    "db_1204848"
 );
 
 // test if connection was established, and print any errors
