@@ -9,6 +9,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             <input type="password" name="password" placeholder="password"></br>
             <p><input type="submit" value="Submit"></p>
         </form>
+
+        <li><a href="home.php"</a>Cancel Login</li>
+
     </main>
     <?
 
@@ -36,6 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $_SESSION['username'] = $username;
         header("location:home.php");
     } else {
+        //Check if Photographer then Check if Admin
         header("location:register.php");
     }
 
