@@ -39,6 +39,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     }
 
     $sql = "INSERT INTO users2 (ID, username, password, type, approved) VALUES ('". $idCount ."', '" .$username."', '".$password."', '".$type."', false)";
+    $db->query($sql);
+
+    header("location:login.php");
 
 
 
