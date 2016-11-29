@@ -12,7 +12,7 @@ echo "<a href=''>PhotoShare</a>";
 
 
 if (isset($_SESSION['username']))
-    echo "<a href=''>Logout</a>";
+    echo "<a href='logout.php'>Logout</a>";
 else
     echo "<a href='register.php'>Register/Sign In</a>";
 
