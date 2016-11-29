@@ -5,6 +5,7 @@
  * Date: 29/11/2016
  * Time: 07:14
  */
+session_start();
 $username = $_GET["username"];
 $test = $_SESSION['test'];
 
