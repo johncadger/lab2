@@ -36,9 +36,12 @@ while($row = $result2->fetch_array())
 {
     $username = $row['username'];
 
-    echo "<li><a href=''>$username</a></li>";
+    echo "<li><a href=''>{$username}</a></li>";
 }
 
 echo "
+
+<p>&term</p>
+
 </main>
 ";
