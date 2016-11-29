@@ -16,4 +16,4 @@ while($row = $result->fetch_array()){
     echo "<p>Name: ".$row['username'];
 }
 
-echo "<p>Test: " . $test;
+echo "<p>Test: " . $_SESSION['test'];
