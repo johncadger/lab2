@@ -34,9 +34,10 @@ while($row = $result1->fetch_array())
 
 while($row = $result2->fetch_array())
 {
-    $username = $row['username'];
+    //$username = $row['username'];
 
-    echo "<li><a href='profile.php?username='.{$username}>{$username}</a></li>";
+    //echo "<li><a href=\'profile.php?username=' . $row['adventure_id']>{$username}</a></li>";
+    echo "<li><a href=\"profile.php?username=". $row['username']."\">{$username}</a>";
 }
 
 echo "
