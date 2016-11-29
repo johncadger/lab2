@@ -6,7 +6,7 @@
  * Time: 07:14
  */
 $username = $_GET["username"];
-$test = $_SESSION['username'];
+$test = $_SESSION['test'];
 
 include("dbconnect.php");
 
@@ -16,4 +16,4 @@ while($row = $result->fetch_array()){
     echo "<p>Name: ".$row['username'];
 }
 
-echo $_SESSION['username'];
+echo $test;
