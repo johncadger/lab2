@@ -11,7 +11,7 @@ $test = $_SESSION['test'];
 
 include("dbconnect.php");
 
-$sql_query_name = "SELECT * FROM users1 where username = '$username'";
+$sql_query_name = "SELECT * FROM users2 where username = '$username'";
 $result = $db->query($sql_query_name);
 while($row = $result->fetch_array()){
     echo "<p>Name: ".$row['username'];
