@@ -5,6 +5,9 @@
  * Date: 29/11/2016
  * Time: 10:44
  */
+
+session_start();
+
 echo "<a href=''>PhotoShare</a>";
 
 
