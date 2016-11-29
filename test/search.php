@@ -34,7 +34,7 @@ while($row = $result->fetch_array())
 
 while($row = $result1->fetch_array())
 {
-    $username = $row['articleID'];
+    $username = $row['username'];
 
     echo "<li><a href=''>$username</a> by {$articleAuthor}</li>";
 }
