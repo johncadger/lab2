@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
     function checklogin($username, $password, $db)
     {
-        $sql = "SELECT * FROM users2 WHERE username='" . $username . "' and password='" . $password . "'";
+        $sql = "SELECT * FROM users2 WHERE username='" . $username . "' and password='" . $password . "'and type='shopper'";
         $result = $db->query($sql);
         while ($row = $result->fetch_array()) {
             return true;
