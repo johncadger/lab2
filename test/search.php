@@ -15,7 +15,7 @@ echo "
 <ul>
 ";
 
-$term = $_POST["term"];
+$term = $_POST["search"];
 
 $sql = "SELECT * FROM blogArticles where articleID = '$term'";
 $result1 = $db->query($sql);
