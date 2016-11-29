@@ -46,7 +46,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         header("location:home.php");
     } else {
         //Check if Photographer then Check if Admin
-        header("location:login.php");
+
+        function checklogin2($username, $password, $db)
+        {
+            $sql = "SELECT * FROM users2 WHERE username='" . $username . "' and password='" . $password . "'and type='photographer'";
+            $result = $db->query($sql);
+            while ($row = $result->fetch_array()) {
+                return true;
+            }
+            return false;
+        }
+
+        if (checklogin2($username, $password, $db)) {
+            session_start();
+            $_SESSION['username'] = $username;
+            header("location:home.php");
+        } else {
+
+            function checklogin3($username, $password, $db)
+            {
+                $sql = "SELECT * FROM users2 WHERE username='" . $username . "' and password='" . $password . "'and type='admin'";
+                $result = $db->query($sql);
+                while ($row = $result->fetch_array()) {
+                    return true;
+                }
+                return false;
+            }
+
+            if (checklogin3($username, $password, $db)) {
+                session_start();
+                $_SESSION['username'] = $username;
+                header("location:home.php");
+            } else {
+                header("location:login.php");
+            }
+
+        }
     }
 
 
