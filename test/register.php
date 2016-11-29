@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
     ?>
     <main>
-        <form action="register.php.php" method="post">
+        <form action="register.php" method="post">
             <input type="text" name="username" placeholder="username"></br>
             <input type="password" name="password" placeholder="password"></br>
             <select name="type">
