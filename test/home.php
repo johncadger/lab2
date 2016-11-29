@@ -6,10 +6,11 @@
  * Time: 19:33
  */
 
+include("header.php");
+
 echo "
 <main>
-<a href=''>PhotoShare</a>
-<a href=''>Register/Sign In</a>
+
 <form action= \"search.php\" method= \"post\">
             <input type=\"text\" name=\"search\" placeholder=\"Enter search term here\"></br>
             <p><input type=\"submit\" value=\"Submit\"></p>
