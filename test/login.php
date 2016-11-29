@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
         function checklogin2($username, $password, $db)
         {
-            $sql = "SELECT * FROM users2 WHERE username='" . $username . "' and password='" . $password . "'and type='photographer'";
+            $sql = "SELECT * FROM users2 WHERE username='" . $username . "' and password='" . $password . "'and type='photographer' and approved= true ";
             $result = $db->query($sql);
             while ($row = $result->fetch_array()) {
                 return true;
