@@ -11,7 +11,7 @@ echo "<a href=''>PhotoShare</a>";
 if (isset($_SESSION['username']))
     echo "<a href=''>Logout</a>";
 else
-    echo "<a href=''>Register/Sign In</a>";
+    echo "<a href='register.php'>Register/Sign In</a>";
 
 //if (isset($_SESSION['admin']))
 //    echo "<a href=''>Admin</a>";
