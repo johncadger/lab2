@@ -41,7 +41,7 @@ while($row = $result2->fetch_array())
 
 echo "
 
-<p>&term</p>
+<p>{$term}</p>
 
 </main>
 ";
