@@ -23,7 +23,7 @@ $result1 = $db->query($sql);
 $sql = "SELECT * FROM users1 where username = '$term'";
 $result2 = $db->query($sql);
 
-while($row = $result->fetch_array())
+while($row = $result1->fetch_array())
 {
     $articleID = $row['articleID'];
     $articleName = $row['articleName'];
@@ -32,7 +32,7 @@ while($row = $result->fetch_array())
     echo "<li><a href='blog/{$articleID}'>{$articleName}</a> by {$articleAuthor}</li>";
 }
 
-while($row = $result1->fetch_array())
+while($row = $result2->fetch_array())
 {
     $username = $row['username'];
 
