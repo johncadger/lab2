@@ -15,7 +15,7 @@ if (isset($_SESSION['username']))
     echo "<a href='logout.php'>Logout</a>";
 else
     echo "<a href='login.php'>Sign In</a>";
-    echo "<li><a href='register.php'>Register</a></li>";
+    echo "<a href='register.php'>Register</a>";
 
 //if (isset($_SESSION['admin']))
 //    echo "<a href=''>Admin</a>";
