@@ -5,6 +5,9 @@
  * Date: 29/11/2016
  * Time: 07:14
  */
+$username = $_GET["username"];
+
+include("dbconnect.php");
 
 $sql_query_name = "SELECT username FROM users1 where username = $username";
 $result = $db->query($sql_query_name);

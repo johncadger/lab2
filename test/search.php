@@ -36,7 +36,7 @@ while($row = $result2->fetch_array())
 {
     $username = $row['username'];
 
-    echo "<li><a href='profile.php?username='.$username>{$username}</a></li>";
+    echo "<li><a href='profile.php?username='.{$username}>{$username}</a></li>";
 }
 
 echo "
