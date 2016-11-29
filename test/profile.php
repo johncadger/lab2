@@ -17,3 +17,8 @@ while($row = $result->fetch_array()){
 }
 
 echo "<p>Test: " . $_SESSION['test'];
+
+if (isset($_SESSION['test']))
+    echo "session lives!";
+else
+    echo "!";
