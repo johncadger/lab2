@@ -36,7 +36,7 @@ while($row = $result1->fetch_array())
 {
     $username = $row['username'];
 
-    echo "<li><a href=''>$username</a> by {$articleAuthor}</li>";
+    echo "<li><a href=''>$username</a></li>";
 }
 
 echo "
