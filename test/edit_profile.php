@@ -10,6 +10,14 @@ include("header.php");
 include("dbconnect.php");
 session_start();
 
+$sql = "SELECT * FROM users2 where username = '{$_SESSION['username']}'";
+$result = $db->query($sql);
+
+while($row = $result->fetch_array())
+{
+    $ID = $row['ID'];
+}
+
 
 if (isset($_SESSION['photographer'])){
 
@@ -22,13 +30,13 @@ if (isset($_SESSION['photographer'])){
 
         ";
 
-        $sql = "SELECT * FROM users2 where username = '{$_SESSION['username']}'";
-        $result = $db->query($sql);
+        //$sql = "SELECT * FROM users2 where username = '{$_SESSION['username']}'";
+        //$result = $db->query($sql);
 
-        while($row = $result->fetch_array())
-        {
-            $ID = $row['ID'];
-        }
+        //while($row = $result->fetch_array())
+        //{
+            //$ID = $row['ID'];
+        //}
 
         $sql = "SELECT * FROM profiledetails where ID = '{$ID}'";
         $result = $db->query($sql);
