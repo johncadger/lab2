@@ -77,15 +77,23 @@ if (isset($_SESSION['admin'])){
         if (isset($_POST['approve'])){
 
             $approveID =  $_POST['approve'];
-            echo "{$approveID}";
-            echo "Approve";
+            //echo "{$approveID}";
+            //echo "Approve";
+
+            $sql = "UPDATE users2 SET approved=true WHERE ID={$approveID}";
+            $db->query($sql);
+
+            header("location:admin.php");
+
 
 
         } else if (isset($_POST['ban'])){
 
             $banID = $_POST['ban'];
-            echo "{$banID}";
-            echo "Ban";
+            //echo "{$banID}";
+            //echo "Ban";
+
+
         }
 
 
