@@ -16,10 +16,10 @@ if (isset($_SESSION['admin'])){
         echo "
         <main>
             <p>Photographers to be approved:</p>
-        </main>>
+        </main>
         ";
 
-        $sql = "SELECT * FROM users2 where type = 'photographer' and approved= false";
+        $sql = "SELECT * FROM users2 where type = 'photographer' and approved = false";
         $result = $db->query($sql);
 
         while($row = $result->fetch_array())
@@ -27,7 +27,7 @@ if (isset($_SESSION['admin'])){
             $ID = $row['ID'];
             $username = $row['username'];
 
-            echo "<li>$username<a href='admin.php?approve='.$ID"/">Approve</a></li>";
+            echo "<li>{$username}<a href='admin.php?approve='.$ID"/">Approve</a></li>";
         }
 
         echo "
