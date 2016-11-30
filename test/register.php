@@ -42,6 +42,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $sql = "INSERT INTO users2 (ID, username, password, type, approved) VALUES ('". $idCount ."', '" .$username."', '".$password."', '".$type."', false)";
     $db->query($sql);
 
+    $sql = "SELECT * FROM users2 WHERE ID=$idCount";
+    $result = $db->query($sql);
+    while ($row = $result->fetch_array()) {
+        $sql = "INSERT INTO profiledetails (ID, firstname, lastname, age, country) VALUES ('". $idCount ."', '...', '...', 0, '...')";
+        $db->query($sql);
+    }
+
     header("location:login.php");
 
 
