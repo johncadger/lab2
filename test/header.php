@@ -26,7 +26,7 @@ if (isset($_SESSION['photographer'])){
 
     //$username = $_SESSION['username'];
 
-    echo "<p><a href='profile.php?username='{$_SESSION['username']}>My Profile</a></p>";
+    echo "<p><a href='profile.php?username='.{$_SESSION['username']}>My Profile</a></p>";
 
     //echo "<li><a href=\"profile.php?username=". $row['username']."\">{$username}</a></li>";
     //echo "<li><a href='profile.php?username='{$username}>{$username}</a></li>";
