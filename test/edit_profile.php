@@ -66,7 +66,7 @@ if (isset($_SESSION['photographer'])){
         $age =  $_POST['age'];
         $country =  $_POST['country'];
 
-        $sql = "UPDATE profiledetails SET firstname= '{$firstname}', lastname= '{$lastname}', age='{$age}', country= '{$country}' WHERE ID=4";
+        $sql = "UPDATE profiledetails SET firstname= '{$firstname}', lastname= '{$lastname}', age='{$age}', country= '{$country}' WHERE ID='{$ID}'";
         $db->query($sql);
 
         header("location:profile.php?username=".$_SESSION['username']);
