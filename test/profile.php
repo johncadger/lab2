@@ -21,7 +21,7 @@ while($row = $result->fetch_array()){
     $ID = $row['ID'];
 }
 
-$sql = "SELECT * FROM profiledetails where ID=$ID";
+$sql = "SELECT * FROM profiledetails where ID= '$ID'";
 $result = $db->query($sql_query_name);
 while($row = $result->fetch_array()){
     echo "<p>First Name: ".$row['firstname'];
