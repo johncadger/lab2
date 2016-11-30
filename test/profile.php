@@ -8,9 +8,20 @@
 
 include("header.php");
 
+
+
 //session_start();
 $username = $_GET["username"];
 //$test = $_SESSION['test'];
+
+if (isset($_SESSION['photographer'])){
+
+    if($_SESSION['username'] = $username)
+        echo"<a href='edit_profile.php'>Edit Profile</a>";
+
+}
+
+
 
 include("dbconnect.php");
 
@@ -28,7 +39,6 @@ while($row = $result->fetch_array()){
     echo "<p>Last Name: ".$row['lastname'];
     echo "<p>Age: ".$row['age'];
     echo "<p>Country: ".$row['country'];
-    echo $ID;
 }
 
 //echo "<p>Test: " . $_SESSION['test'];
