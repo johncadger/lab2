@@ -45,7 +45,7 @@ if (isset($_SESSION['admin'])){
             $ID = $row['ID'];
             $username = $row['username'];
 
-            echo "<li>$username<a href='admin.php?ban='.$ID"/">Ban</a></li>";
+            echo "<li>{$username} - <a href='admin.php?ban=.$ID'>Ban</a></li>";
         }
 
 
