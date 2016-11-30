@@ -28,6 +28,7 @@ while($row = $result->fetch_array()){
     echo "<p>Last Name: ".$row['lastname'];
     echo "<p>Age: ".$row['age'];
     echo "<p>Country: ".$row['country'];
+    echo $ID;
 }
 
 //echo "<p>Test: " . $_SESSION['test'];
