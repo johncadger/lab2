@@ -76,6 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             if (checklogin3($username, $password, $db)) {
                 session_start();
                 $_SESSION['username'] = $username;
+                $_SESSION['admin'] = true;
                 header("location:home.php");
             } else {
                 header("location:login.php");
