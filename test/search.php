@@ -6,6 +6,8 @@
  * Time: 19:43
  */
 
+include("header.php");
+
 include("dbconnect.php");
 
 echo "

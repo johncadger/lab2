@@ -5,6 +5,10 @@
  * Date: 29/11/2016
  * Time: 12:34
  */
+
+
+include("header.php");
+
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
     // execute if requested using HTTP GET Method

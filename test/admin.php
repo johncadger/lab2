@@ -6,6 +6,7 @@
  * Time: 10:44
  */
 
+include("header.php");
 include("dbconnect.php");
 session_start();
 
