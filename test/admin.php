@@ -87,13 +87,16 @@ if (isset($_SESSION['admin'])){
             header("location:admin.php");
 
 
-
         } else if (isset($_POST['ban'])){
 
             $banID = $_POST['ban'];
             //echo "{$banID}";
             //echo "Ban";
 
+            $sql = "DELETE FROM users2 WHERE ID={$banID}";
+            $db->query($sql);
+
+            header("location:admin.php");
 
         }
 
