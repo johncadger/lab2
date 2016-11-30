@@ -34,10 +34,10 @@ if (isset($_SESSION['photographer'])){
         $result = $db->query($sql);
         while($row = $result->fetch_array())
         {
-            echo "<input type=\"text\" name=\"firstname\" placeholder=\"{$row['firstname']}\">";
-            echo "<input type=\"text\" name=\"lastname\" placeholder=\"{$row['lastname']}\">";
-            echo "<input type=\"text\" name=\"age\" placeholder=\"{$row['age']}\">";
-            echo "<input type=\"text\" name=\"country\" placeholder=\"{$row['country']}\">";
+            echo "<input type=\"text\" name=\"firstname\" value=\"{$row['firstname']}\">";
+            echo "<input type=\"text\" name=\"lastname\" value=\"{$row['lastname']}\">";
+            echo "<input type=\"text\" name=\"age\" value=\"{$row['age']}\">";
+            echo "<input type=\"text\" name=\"country\" value=\"{$row['country']}\">";
 
 
             //echo "<li>{$username} - <a href='admin.php?approve=$ID'>Approve</a></li>";
