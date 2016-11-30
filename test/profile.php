@@ -10,7 +10,7 @@ include("header.php");
 
 
 
-//session_start();
+session_start();
 $username = $_GET["username"];
 //$test = $_SESSION['test'];
 

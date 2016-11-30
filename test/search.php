@@ -22,7 +22,7 @@ $term = $_POST["search"];
 $sql = "SELECT * FROM blogArticles where articleID = '$term'";
 $result1 = $db->query($sql);
 
-$sql = "SELECT * FROM users2 where username = '$term'";
+$sql = "SELECT * FROM users2 where username = '$term' and type = 'photographer'";
 $result2 = $db->query($sql);
 
 while($row = $result1->fetch_array())
