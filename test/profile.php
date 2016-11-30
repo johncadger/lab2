@@ -14,15 +14,15 @@ $username = $_GET["username"];
 
 include("dbconnect.php");
 
-$sql_query_name = "SELECT * FROM users2 where username = '$username'";
-$result = $db->query($sql_query_name);
+$sql = "SELECT * FROM users2 where username = '$username'";
+$result = $db->query($sql);
 while($row = $result->fetch_array()){
     echo "<p>Username: ".$row['username'];
     $ID = $row['ID'];
 }
 
-$sql = "SELECT * FROM profiledetails where ID= '$ID'";
-$result = $db->query($sql_query_name);
+$sql = "SELECT * FROM profiledetails where ID = '$ID'";
+$result = $db->query($sql);
 while($row = $result->fetch_array()){
     echo "<p>First Name: ".$row['firstname'];
     echo "<p>Last Name: ".$row['lastname'];
