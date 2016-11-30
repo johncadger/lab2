@@ -71,11 +71,20 @@ if (isset($_SESSION['admin'])){
     } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
-        $approveID =  $_POST['approve'];
-        $banID = $_POST['ban'];
 
-        echo "$approveID";
-        echo "$banID";
+
+
+        if (isset($_POST['approve'])){
+
+            $approveID =  $_POST['approve'];
+            echo "{$approveID}";
+
+
+        } else if (isset($_POST['ban'])){
+
+            $banID = $_POST['ban'];
+            echo "{$banID}";
+        }
 
 
 
