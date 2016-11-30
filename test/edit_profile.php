@@ -53,6 +53,19 @@ if (isset($_SESSION['photographer'])){
 
     } else if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
+        $firstname =  $_POST['firstname'];
+        $lastname =  $_POST['lastname'];
+        $age =  $_POST['age'];
+        $country =  $_POST['country'];
+
+        $sql = "UPDATE profiledetails SET firstname= '{$firstname}', lastname= '{$lastname}', age='{$age}', country= '{$country}' WHERE ID='{$ID}'";
+        $db->query($sql);
+
+        header("location:profile.php?username=".$_SESSION['username']);
+        //echo "<p><a href=\"profile.php?username=". $_SESSION['username']."\">My Profile</a></p>";
+
+
+
 
     }
 
