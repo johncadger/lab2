@@ -11,4 +11,16 @@ if (isset($_SESSION['username']))
 {
     unset($_SESSION['username']);
 }
+
+if (isset($_SESSION['admin']))
+{
+    unset($_SESSION['admin']);
+}
+
+if (isset($_SESSION['photographer']))
+{
+    unset($_SESSION['photographer']);
+}
+
+
 header("location:home.php");

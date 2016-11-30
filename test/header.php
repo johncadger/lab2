@@ -22,5 +22,5 @@ else{
 if (isset($_SESSION['admin']))
     echo "<a href='admin.php'>Admin</a>";
 
-//if (isset($_SESSION['photographer']))
-//    echo "<a href=''>Chat</a>";
+if (isset($_SESSION['photographer']))
+    echo "<a href=''>Chat</a>";
