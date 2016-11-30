@@ -11,9 +11,10 @@ session_start();
 echo "<a href='home.php'>PhotoShare</a>";
 
 
-if (isset($_SESSION['username']))
+if (isset($_SESSION['username'])) {
+    echo "<a href='profile.php?username='.{$_SESSION['username']}></a>";
     echo "<a href='logout.php'>Logout</a> <p>Welcome, {$_SESSION['username']}</p>";
-else{
+}else{
     echo "<a href='login.php'>Sign In</a>";
     echo "<a href='register.php'>Register</a>";
 }

@@ -38,8 +38,8 @@ while($row = $result2->fetch_array())
 {
     $username = $row['username'];
 
-    session_start();
-    $_SESSION['test'] = $username;
+    //session_start();
+    //$_SESSION['test'] = $username;
 
     //echo "<li><a href=\'profile.php?username=' . $row['adventure_id']>{$username}</a></li>";
     echo "<li><a href=\"profile.php?username=". $row['username']."\">{$username}</a></li>";
