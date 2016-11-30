@@ -78,12 +78,14 @@ if (isset($_SESSION['admin'])){
 
             $approveID =  $_POST['approve'];
             echo "{$approveID}";
+            echo "Approve";
 
 
         } else if (isset($_POST['ban'])){
 
             $banID = $_POST['ban'];
             echo "{$banID}";
+            echo "Ban";
         }
 
 
