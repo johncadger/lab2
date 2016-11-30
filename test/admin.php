@@ -44,7 +44,8 @@ if (isset($_SESSION['admin'])){
 
         <main>
             <p>All Users:</p>
-        </main>
+            <form action=\"admin.php\" method=\"post\">
+                <select name='ban'>
         ";
 
         $sql = "SELECT * FROM users2";
@@ -55,8 +56,16 @@ if (isset($_SESSION['admin'])){
             $ID = $row['ID'];
             $username = $row['username'];
 
-            echo "<li>{$username} - <a href='admin.php?ban=$ID'>Ban</a></li>";
+            //echo "<li>{$username} - <a href='admin.php?ban=$ID'>Ban</a></li>";
+            echo "<option value= {$ID}>{$username}</option>";
         }
+
+        echo "
+        </select></br>
+                    <p><input type=\"submit\" value=\"Ban\"></p>
+            </form>
+        </main>
+        ";
 
 
     } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
