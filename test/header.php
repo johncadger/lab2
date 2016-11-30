@@ -8,7 +8,7 @@
 
 session_start();
 
-echo "<a href=''>PhotoShare</a>";
+echo "<a href='home.php'>PhotoShare</a>";
 
 
 if (isset($_SESSION['username']))
