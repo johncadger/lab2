@@ -27,7 +27,7 @@ if (isset($_SESSION['admin'])){
             $ID = $row['ID'];
             $username = $row['username'];
 
-            echo "<li>{$username} - <a href='admin.php?approve=.$ID'>Approve</a></li>";
+            echo "<li>{$username} - <a href='admin.php?approve=$ID'>Approve</a></li>";
             //echo "Username: {$username} and ID: {$ID}";
         }
 
@@ -45,7 +45,7 @@ if (isset($_SESSION['admin'])){
             $ID = $row['ID'];
             $username = $row['username'];
 
-            echo "<li>{$username} - <a href='admin.php?ban=.$ID'>Ban</a></li>";
+            echo "<li>{$username} - <a href='admin.php?ban=$ID'>Ban</a></li>";
         }
 
 
