@@ -34,7 +34,7 @@ if (isset($_SESSION['photographer'])){
         $result = $db->query($sql);
         while($row = $result->fetch_array())
         {
-            echo "<input type=\"text\" name=\"firstname\"\">";
+            echo "<input type=\"text\" name=\"firstname\" value=\"{$row['firstname']}\">";
             echo "<input type=\"text\" name=\"lastname\" value=\"{$row['lastname']}\">";
             echo "<input type=\"text\" name=\"age\" value=\"{$row['age']}\">";
             echo "<input type=\"text\" name=\"country\" value=\"{$row['country']}\">";
@@ -58,7 +58,7 @@ if (isset($_SESSION['photographer'])){
         $age =  $_POST['age'];
         $country =  $_POST['country'];
 
-        $sql = "UPDATE profiledetails SET firstname= '{$firstname}', lastname= '{$lastname}', age='{$age}', country= '{$country}' WHERE ID='{$ID}'";
+        $sql = "UPDATE profiledetails SET firstname= '{$firstname}', lastname= '{$lastname}', age='{$age}', country= '{$country}' WHERE ID=4";
         $db->query($sql);
 
         header("location:profile.php?username=".$_SESSION['username']);
