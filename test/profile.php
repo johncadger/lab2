@@ -16,7 +16,7 @@ $username = $_GET["username"];
 
 if (isset($_SESSION['photographer'])){
 
-    if($_SESSION['username'] = $username)
+    if($_SESSION['username'] == $username)
         echo"<a href='edit_profile.php'>Edit Profile</a>";
 
 }
