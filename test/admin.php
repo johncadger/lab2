@@ -28,7 +28,7 @@ if (isset($_SESSION['admin'])){
             $username = $row['username'];
 
             //echo "<li>{$username}<a href='admin.php?approve='.$ID"/">Approve</a></li>";
-            echo "works";
+            echo "Username: {$username} and ID: {$ID}";
         }
 
         echo "
