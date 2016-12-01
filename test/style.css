@@ -1,8 +1,11 @@
 
-h1{
+#hdr{
 
-    background-color: #a1a1a1;
+    background-color: grey;
     padding-top: 14px;
+    text-decoration: none;
+    color: white;
+    font-size: 20;
 
 }
 

@@ -8,14 +8,14 @@
 
 session_start();
 
-echo "<h1><a href='home.php'>PhotoShare</a></h1>";
+echo "<a href='home.php' id='hdr'>PhotoShare</a>";
 
 
 if (isset($_SESSION['username'])) {
     echo "<h1><a href='logout.php'>Logout</a> Welcome, {$_SESSION['username']}</h1>";
 }else{
-    echo "<h1><a href='login.php'>Sign In</a></h1>";
-    echo "<h1><a href='register.php'>Register</a></h1>";
+    echo "<a href='login.php' id='hdr'>Sign In</a>";
+    echo "<a href='register.php'id='hdr'>Register</a>";
 }
 
 
