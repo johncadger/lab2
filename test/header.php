@@ -25,7 +25,7 @@ if (isset($_SESSION['username'])) {
 
 
 if (isset($_SESSION['admin']))
-    echo "<a href='admin.php' class='hdr'>Admin</a>";
+    echo "<p><a href='admin.php' class='hdr'>Admin</a></p>";
 
 if (isset($_SESSION['photographer'])){
 
