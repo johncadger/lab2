@@ -33,10 +33,10 @@ if (isset($_SESSION['photographer'])){
 
     //echo "<p><a href='profile.php?username='.{$username}>My Profile</a></p>";
 
-    echo "<p><a href=\"profile.php?username=". $_SESSION['username']."\" class='hdr'>My Profile</a>";
+    echo "<p><a href=\"profile.php?username=". $_SESSION['username']."\" class='hdr'>My Profile</a></p>";
     //echo "<li><a href='profile.php?username='{$username}>{$username}</a></li>";
 
-    echo "<a href=''class='hdr'>Chat</a></p>";
+    echo "<a href=''class='hdr'>Chat</a>";
 
 }
 
