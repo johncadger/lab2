@@ -55,6 +55,9 @@ if (isset($_SESSION['photographer'])){
         echo "
                     <p><input type=\"submit\" value=\"Update\"></p>
             </form>
+
+            <a href='add_photo.php'>Add Photo</a>
+
         </main>
         ";
 
