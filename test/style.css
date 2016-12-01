@@ -1,4 +1,10 @@
+.hdr{
 
+    text-decoration: none;
+    color: white;
+    padding-right: 10px;
+
+}
 
 
 #logo{
@@ -10,10 +16,7 @@
 #head{
     background-color: grey;
     padding-top: 14px;
-    text-decoration: none;
-    color: white;
     font-size: 22px;
-    padding-right: 10px;
 }
 
 
