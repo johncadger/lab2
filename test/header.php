@@ -11,6 +11,8 @@ session_start();
 echo "
 <link rel=\"stylesheet\" href=\"style.css\">
 
+<section id='head'>
+
 <a href='home.php' class='hdr' id='logo'>PhotoShare</a>";
 
 
@@ -37,3 +39,5 @@ if (isset($_SESSION['photographer'])){
     echo "<a href=''>Chat</a>";
 
 }
+
+echo"</section>";

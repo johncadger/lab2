@@ -1,18 +1,19 @@
 
-.hdr{
 
-    background-color: grey;
-    padding-top: 14px;
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-
-}
 
 #logo{
 
     font-size: 50px;
 
+}
+
+#head{
+    background-color: grey;
+    padding-top: 14px;
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    padding-right: 10px;
 }
 
 
