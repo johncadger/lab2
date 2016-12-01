@@ -11,14 +11,14 @@ session_start();
 echo "
 <link rel=\"stylesheet\" href=\"style.css\">
 
-<a href='home.php' id='hdr'>PhotoShare</a>";
+<a href='home.php' class='hdr' id='logo'>PhotoShare</a>";
 
 
 if (isset($_SESSION['username'])) {
     echo "<h1><a href='logout.php'>Logout</a> Welcome, {$_SESSION['username']}</h1>";
 }else{
-    echo "<a href='login.php' id='hdr'>Sign In</a>";
-    echo "<a href='register.php'id='hdr'>Register</a>";
+    echo "<a href='login.php' class='hdr'>Sign In</a>";
+    echo "<a href='register.php'class='hdr'>Register</a>";
 }
 
 

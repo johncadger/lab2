@@ -1,11 +1,17 @@
 
-#hdr{
+.hdr{
 
     background-color: grey;
     padding-top: 14px;
     text-decoration: none;
     color: white;
-    font-size: 20;
+    font-size: 20px;
+
+}
+
+#logo{
+
+    font-size: 50px;
 
 }
 
