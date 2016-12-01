@@ -8,7 +8,10 @@
 
 session_start();
 
-echo "<a href='home.php' id='hdr'>PhotoShare</a>";
+echo "
+<link rel=\"stylesheet\" href=\"style.css\">
+
+<a href='home.php' id='hdr'>PhotoShare</a>";
 
 
 if (isset($_SESSION['username'])) {
