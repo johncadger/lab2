@@ -17,7 +17,7 @@ echo "
 
 
 if (isset($_SESSION['username'])) {
-    echo "<h1><a href='logout.php'>Logout</a> Welcome, {$_SESSION['username']}</h1>";
+    echo "<a href='logout.php' class='hdr'>Logout</a> Welcome, {$_SESSION['username']}";
 }else{
     echo "<a href='login.php' class='hdr'>Sign In</a>";
     echo "<a href='register.php'class='hdr'>Register</a>";
@@ -33,10 +33,10 @@ if (isset($_SESSION['photographer'])){
 
     //echo "<p><a href='profile.php?username='.{$username}>My Profile</a></p>";
 
-    echo "<p><a href=\"profile.php?username=". $_SESSION['username']."\" class='hdr'>My Profile</a></p>";
+    echo "<p><a href=\"profile.php?username=". $_SESSION['username']."\" class='hdr'>My Profile</a>";
     //echo "<li><a href='profile.php?username='{$username}>{$username}</a></li>";
 
-    echo "<a href=''class='hdr'>Chat</a>";
+    echo "<a href=''class='hdr'>Chat</a></p>";
 
 }
 
