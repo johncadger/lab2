@@ -47,6 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     if (checklogin($username, $password, $db)) {
         session_start();
         $_SESSION['username'] = $username;
+        $_SESSION['shopper'] = true;
         header("location:home.php");
     } else {
         //Check if Photographer then Check if Admin

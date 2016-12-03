@@ -41,6 +41,32 @@ while($row = $result->fetch_array()){
     echo "<p>Country: ".$row['country'];
 }
 
+$sql = "SELECT * FROM photos where pID = '$ID'";
+$result = $db->query($sql);
+while($row = $result->fetch_array()){
+    echo "
+    <section id='photoNode'>
+        <img src=<img src={$row['URL']} id=\"profile_image\"/>
+        <p>Title: {$row['title']}</p>
+        <p>Description: {$row['description']}</p>
+        <p>Price: £{$row['price']}</p>
+        ";
+
+    if(isset($_SESSION['shopper'])) {
+        //echo "<a href='purchase.php?ID='{$row['ID']}>Purchase</a>";
+        echo "
+        <form action='purchase.php' method='post'>
+            <button name=\"purchaseID\" type=\"submit\" value=\"{$row['ID']}\">Purchase</button>
+        </form>
+
+        ";
+
+    }
+
+echo "</section>";
+
+}
+
 //echo "<p>Test: " . $_SESSION['test'];
 
 //if (isset($_SESSION['test']))
