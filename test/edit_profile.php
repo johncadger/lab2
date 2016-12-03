@@ -126,7 +126,7 @@ echo "</section>
             while($row = $result->fetch_array())
             {
                 if(realpath($row['URL']) and is_writable($row['URL']))
-                    delete($row['URL']);
+                    unlink($row['URL']);
             }
 
             $sql = "DELETE FROM photos WHERE ID={$deleteID}";
