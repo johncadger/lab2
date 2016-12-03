@@ -94,11 +94,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                 $pID = $row['ID'];
             }
 
-            echo $target_file."     ";
-            echo $_FILES["fileToUpload"]["tmp_name"]."        ";
-            echo basename($_FILES["fileToUpload"]["name"])."       ";
+            $URL = 'uploads/'.basename($_FILES["fileToUpload"]["name"]);
 
-            //$sql = "INSERT INTO photos (ID, URL, title, description, price, pID) VALUES ('". $idCount ."','\". $target_file .\"', '" .$title."', '".$description."', '".$price."', $pID)";
+            //echo $target_file."     ";
+            //echo $_FILES["fileToUpload"]["tmp_name"]."        ";
+            //echo basename($_FILES["fileToUpload"]["name"])."       ";
+
+            echo $URL;
+
+            //$sql = "INSERT INTO photos (ID, URL, title, description, price, pID) VALUES ('". $idCount ."','uploads/', '" .$title."', '".$description."', '".$price."', $pID)";
             //$db->query($sql);
 
 
