@@ -10,43 +10,62 @@ include("header.php");
 
 include("dbconnect.php");
 
-echo "
-<main>
-<h2>Blog Articles</h2>
-<p>Below is a list of all blog articles</p>
-<ul>
-";
+echo "<p>Photographers: </p>";
 
 $term = $_POST["search"];
 
-//change to photos
-$sql = "SELECT * FROM blogArticles where articleID = '$term'";
-$result1 = $db->query($sql);
-
 $sql = "SELECT * FROM users2 where username = '$term' and type = 'photographer'";
-$result2 = $db->query($sql);
+$result = $db->query($sql);
 
-while($row = $result1->fetch_array())
+while($row = $result->fetch_array())
 {
-    $articleID = $row['articleID'];
-    $articleName = $row['articleName'];
-    $articleAuthor = $row['articleAuthor'];
-    
+    //$username = $row['username'];
+    echo "<a href='profile.php?username='{$row['username']}>{$row['username']}</a>";
+}
+
+echo"<p>Photographs: </p>";
+
+
+//change to photos
+$sql = "SELECT * FROM photos where title = '$term'";
+$result = $db->query($sql);
+
+while($row = $result->fetch_array()) {
+    //$articleID = $row['articleID'];
+    //$articleName = $row['articleName'];
+    //$articleAuthor = $row['articleAuthor'];
+
     //container with image, details and purchase option
-    echo "<li><a href='blog/{$articleID}'>{$articleName}</a> by {$articleAuthor}</li>";
+
+    echo "
+        <section id='photoNode'>
+            <img src={$row['URL']} id=\"search_image\"/>
+            <p>Title: {$row['title']}</p>
+            <p>Description: {$row['description']}</p>
+            <p>Price: £{$row['price']}</p>";
+
+    $purchaseID = $row['ID'];
+
+    $sql = "SELECT * FROM users2 WHERE ID = {$row['pID']}";
+    $result = $db->query($sql);
+    while($row = $result->fetch_array()){
+
+        echo "<p>Photographer: <a href='profile.php?username='{$row['username']}>{$row['username']}</a></p>";
+
+    }
+
+
+    if (isset($_SESSION['shopper'])) {
+        echo "
+        <form action='purchase.php' method='post'>
+            <button name=\"purchaseID\" type=\"submit\" value=\"{$purchaseID}\">Purchase</button>
+        </form>
+
+        ";
+
+        echo "
+        </section>
+    ";
+
+    }
 }
-
-while($row = $result2->fetch_array())
-{
-    $username = $row['username'];
-
-    //session_start();
-    //$_SESSION['test'] = $username;
-
-    //echo "<li><a href=\'profile.php?username=' . $row['adventure_id']>{$username}</a></li>";
-    echo "<li><a href=\"profile.php?username=". $row['username']."\">{$username}</a></li>";
-}
-
-echo "
-</main>
-";
