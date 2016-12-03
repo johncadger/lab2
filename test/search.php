@@ -20,7 +20,7 @@ $result = $db->query($sql);
 while($row = $result->fetch_array())
 {
     //$username = $row['username'];
-    echo "<a href='profile.php?username='{$row['username']}>{$row['username']}</a>";
+    echo "<a href='profile.php?username=' {$row['username']}>{$row['username']}</a>";
 }
 
 echo"<p>Photographs: </p>";
@@ -50,7 +50,7 @@ while($row = $result->fetch_array()) {
     $result = $db->query($sql);
     while($row = $result->fetch_array()){
 
-        echo "<p>Photographer: <a href='profile.php?username='{$row['username']}>{$row['username']}</a></p>";
+        echo "<p>Photographer: <a href='profile.php?username=' {$row['username']}>{$row['username']}</a></p>";
 
     }
 
