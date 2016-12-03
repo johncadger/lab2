@@ -74,7 +74,7 @@ if (isset($_SESSION['photographer'])){
                     <label>Title: <input type=\"text\" name=\"title\" value=\"{$row['title']}\"></label></br>
                     <label>Description: <input type=\"text\" name=\"description\" value=\"{$row['description']}\"></label></br>
                     <label>Price: <input type=\"text\" name=\"price\" value=\"{$row['price']}\"></label></br>
-                    <p><input type=\"submit\" title='Update P' value=\"Update Photograph\"></p>
+                    <p><input type=\"submit\" name='ID' value=\"Update Photograph\"></p>
                 </form>
 
                 <form>
@@ -107,13 +107,12 @@ echo "</section>
             $description = $_POST['description'];
             $price = $_POST['price'];
 
-            $ID = $_POST['id'];
-            $Submit = $_POST['submit'];
+            $ID1 = $_POST['ID'];
 
             //$sql = "UPDATE photos SET title= '{$title}', description= '{$description}', price='{$price}' WHERE ID='{$ID}'";
             //$db->query($sql);
 
-            echo $Submit;
+            echo $ID1;
 
 
         } else{
