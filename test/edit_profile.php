@@ -111,10 +111,9 @@ echo "</section>
 
             $ID1 = $_POST['ID'];
 
-            //$sql = "UPDATE photos SET title= '{$title}', description= '{$description}', price='{$price}' WHERE ID='{$ID}'";
-            //$db->query($sql);
+            $sql = "UPDATE photos SET title= '{$title}', description= '{$description}', price='{$price}' WHERE ID='{$ID1}'";
+            $db->query($sql);
 
-            echo $ID1;
 
 
         } else{
@@ -123,7 +122,7 @@ echo "</section>
 
 
 
-        //header("location:profile.php?username=".$_SESSION['username']);
+        header("location:profile.php?username=".$_SESSION['username']);
 
 
 
