@@ -70,14 +70,14 @@ if (isset($_SESSION['photographer'])){
         {
             echo"
                 <img src={$row['URL']} id=\"edit_image\"/>
-                <form action=\"edit_profile.php\" id='{$row['ID']}' method=\"post\">
+                <form action=\"edit_profile.php\" method=\"post\">
                     <label>Title: <input type=\"text\" name=\"title\" value=\"{$row['title']}\"></label></br>
                     <label>Description: <input type=\"text\" name=\"description\" value=\"{$row['description']}\"></label></br>
                     <label>Price: <input type=\"text\" name=\"price\" value=\"{$row['price']}\"></label></br>
                     <button name=\"ID\" type=\"submit\" value=\"{$row['ID']}\">Update Photograph</button>
                 </form>
 
-                <form>
+                 <form action=\"edit_profile . php\" method=\"post\">
                     <button name=\"deleteID\" type=\"submit\" value=\"{$row['ID']}\">Delete</button>
                 </form>
             ";
