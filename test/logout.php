@@ -12,6 +12,11 @@ if (isset($_SESSION['username']))
     unset($_SESSION['username']);
 }
 
+if (isset($_SESSION['shopper']))
+{
+    unset($_SESSION['shopper']);
+}
+
 if (isset($_SESSION['admin']))
 {
     unset($_SESSION['admin']);
