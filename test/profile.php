@@ -46,7 +46,7 @@ $result = $db->query($sql);
 while($row = $result->fetch_array()){
     echo "
     <section id='photoNode'>
-        <img src=<img src={$row['URL']} id=\"profile_image\"/>
+        <img src={$row['URL']} id=\"profile_image\"/>
         <p>Title: {$row['title']}</p>
         <p>Description: {$row['description']}</p>
         <p>Price: £{$row['price']}</p>
