@@ -100,10 +100,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             //echo $_FILES["fileToUpload"]["tmp_name"]."        ";
             //echo basename($_FILES["fileToUpload"]["name"])."       ";
 
-            echo $URL;
+            //echo $URL;
 
-            //$sql = "INSERT INTO photos (ID, URL, title, description, price, pID) VALUES ('". $idCount ."','uploads/', '" .$title."', '".$description."', '".$price."', $pID)";
-            //$db->query($sql);
+            $sql = "INSERT INTO photos (ID, URL, title, description, price, pID) VALUES ('". $idCount ."','".$URL."', '" .$title."', '".$description."', '".$price."', $pID)";
+            $db->query($sql);
+
+            header("location:edit_profile.php");
 
 
         } else {
