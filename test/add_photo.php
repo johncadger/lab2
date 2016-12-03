@@ -5,6 +5,12 @@
  * Date: 29/11/2016
  * Time: 07:14
  */
+include("header.php");
+include("dbconnect.php");
+session_start();
+
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
     echo "
