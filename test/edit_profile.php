@@ -53,7 +53,7 @@ if (isset($_SESSION['photographer'])){
         }
 
         echo "
-                    <p><input type=\"submit\" value=\"Update\"></p>
+                    <p><input type=\"submit\" value=\"Update Details\"></p>
             </form>
             
 
@@ -70,14 +70,16 @@ if (isset($_SESSION['photographer'])){
         {
             echo"
                 <img src={$row['URL']} id=\"edit_image\"/>
-                <form action=\"edit_profile.php\" method=\"post\">
+                <form action=\"edit_profile.php\" name='{$row['ID']}' method=\"post\">
                     <label>Title: <input type=\"text\" name=\"title\" value=\"{$row['title']}\"></label></br>
                     <label>Description: <input type=\"text\" name=\"description\" value=\"{$row['description']}\"></label></br>
                     <label>Price: <input type=\"text\" name=\"price\" value=\"{$row['price']}\"></label></br>
-                    <p><input type=\"submit\" value=\"Update\"></p>
+                    <p><input type=\"submit\" value=\"Update Photograph\"></p>
                 </form>
 
-                <a href='edit_profile.php?delete'.{$row['ID']}>Delete Photograph</a>
+                <form>
+                    <p><input type=\"submit\" value=\"Delete\"></p>
+                </form>
             ";
         }
 
@@ -89,16 +91,37 @@ echo "</section>
 
     } else if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-        $firstname =  $_POST['firstname'];
-        $lastname =  $_POST['lastname'];
-        $age =  $_POST['age'];
-        $country =  $_POST['country'];
+        if(isset($_POST['firstname'])){
 
-        $sql = "UPDATE profiledetails SET firstname= '{$firstname}', lastname= '{$lastname}', age='{$age}', country= '{$country}' WHERE ID='{$ID}'";
-        $db->query($sql);
+            $firstname =  $_POST['firstname'];
+            $lastname =  $_POST['lastname'];
+            $age =  $_POST['age'];
+            $country =  $_POST['country'];
 
-        header("location:profile.php?username=".$_SESSION['username']);
-        //echo "<p><a href=\"profile.php?username=". $_SESSION['username']."\">My Profile</a></p>";
+            $sql = "UPDATE profiledetails SET firstname= '{$firstname}', lastname= '{$lastname}', age='{$age}', country= '{$country}' WHERE ID='{$ID}'";
+            $db->query($sql);
+
+        } else if(isset($_POST['title'])){
+
+            $title = $_POST['title'];
+            $description = $_POST['description'];
+            $price = $_POST['price'];
+
+            $ID = $_POST['name'];
+
+            //$sql = "UPDATE photos SET title= '{$title}', description= '{$description}', price='{$price}' WHERE ID='{$ID}'";
+            //$db->query($sql);
+
+            echo $ID;
+
+
+        } else{
+
+        }
+
+
+
+        //header("location:profile.php?username=".$_SESSION['username']);
 
 
 
