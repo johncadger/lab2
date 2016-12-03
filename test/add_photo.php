@@ -94,8 +94,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                 $pID = $row['ID'];
             }
 
-            $sql = "INSERT INTO photos (ID, URL, title, description, price, pID) VALUES ('". $idCount ."','\". $target_file .\"', '" .$title."', '".$description."', '".$price."', $pID)";
-            $db->query($sql);
+            echo $target_file;
+            echo $_FILES["fileToUpload"]["tmp_name"];
+            echo basename($_FILE["fileToUpload"]["name"]);
+
+            //$sql = "INSERT INTO photos (ID, URL, title, description, price, pID) VALUES ('". $idCount ."','\". $target_file .\"', '" .$title."', '".$description."', '".$price."', $pID)";
+            //$db->query($sql);
 
 
         } else {
