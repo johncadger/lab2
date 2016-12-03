@@ -108,11 +108,12 @@ echo "</section>
             $price = $_POST['price'];
 
             $ID = $_POST['id'];
+            $Submit = $_POST['submit'];
 
             //$sql = "UPDATE photos SET title= '{$title}', description= '{$description}', price='{$price}' WHERE ID='{$ID}'";
             //$db->query($sql);
 
-            echo $ID;
+            echo $Submit;
 
 
         } else{
