@@ -70,7 +70,7 @@ if (isset($_SESSION['photographer'])){
         {
             echo"
                 <img src={$row['URL']} id=\"edit_image\"/>
-                <form action=\"edit_profile.php\" name='{$row['ID']}' method=\"post\">
+                <form action=\"edit_profile.php\" id='{$row['ID']}' method=\"post\">
                     <label>Title: <input type=\"text\" name=\"title\" value=\"{$row['title']}\"></label></br>
                     <label>Description: <input type=\"text\" name=\"description\" value=\"{$row['description']}\"></label></br>
                     <label>Price: <input type=\"text\" name=\"price\" value=\"{$row['price']}\"></label></br>
@@ -107,7 +107,7 @@ echo "</section>
             $description = $_POST['description'];
             $price = $_POST['price'];
 
-            $ID = $_POST['name'];
+            $ID = $_POST['id'];
 
             //$sql = "UPDATE photos SET title= '{$title}', description= '{$description}', price='{$price}' WHERE ID='{$ID}'";
             //$db->query($sql);
