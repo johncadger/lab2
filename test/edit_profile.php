@@ -77,7 +77,7 @@ if (isset($_SESSION['photographer'])){
                     <p><input type=\"submit\" value=\"Update\"></p>
                 </form>
 
-                <a href='edit_profile.php?delete'.{$row['ID']}/>
+                <a href='edit_profile.php?delete'.{$row['ID']}>Delete Photograph</a>
             ";
         }
 
