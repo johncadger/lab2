@@ -55,8 +55,33 @@ if (isset($_SESSION['photographer'])){
         echo "
                     <p><input type=\"submit\" value=\"Update\"></p>
             </form>
+            
 
             <a href='add_photo.php'>Add Photo</a>
+
+            <p>Edit Photographs Here:</p>
+
+            <section id='edit_photo'>
+                ";
+
+        $sql = "SELECT * FROM photos where pID = '{$ID}'";
+        $result = $db->query($sql);
+        while($row = $result->fetch_array())
+        {
+            echo"
+                <img src={$row['URL']} id=\"edit_image\"/>
+                <form action=\"edit_profile.php\" method=\"post\">
+                    <label>Title: <input type=\"text\" name=\"title\" value=\"{$row['title']}\"></label></br>
+                    <label>Description: <input type=\"text\" name=\"description\" value=\"{$row['description']}\"></label></br>
+                    <label>Price: <input type=\"text\" name=\"price\" value=\"{$row['price']}\"></label></br>
+                    <p><input type=\"submit\" value=\"Update\"></p>
+                </form>
+
+                <a href='edit_profile.php?delete'.{$row['ID']}/>
+            ";
+        }
+
+echo "</section>
 
         </main>
         ";

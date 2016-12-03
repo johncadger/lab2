@@ -12,6 +12,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     <form action=\"add_photo.php\" method=\"post\" enctype=\"multipart/form-data\">
         Select photograph to upload:
         <input type=\"file\" name=\"fileToUpload\" id=\"fileToUpload\">
+        //Title, description and price
+        <label>Title: <input type=\"text\" name=\"title\"></label></br>
+        <label>Description: <input type=\"text\" name=\"description\"></label></br>
+        <label>Price: <input type=\"text\" name=\"price\" placeholder='decimal value ex:10.99'></label></br>
         <input type=\"submit\" value=\"Upload Image\" name=\"submit\">
     </form>
 
@@ -64,6 +68,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
             echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+
+            //INSERT into DB with metadata
+            $title = $_POST["title"];
+            $description = $_POST["description"];
+            $price = $_POST["price"];
+
+            $idCount = 1;
+
+            $sql = "SELECT * FROM photos";
+            $result = $db->query($sql);
+            while ($row = $result->fetch_array()) {
+                $idCount++;
+            }
+
+            $sql = "SELECT * FROM users2 WHERE  username='{$_SESSION['username']}'";
+            $result = $db->query($sql);
+            while ($row = $result->fetch_array()) {
+                $pID = $row['ID'];
+            }
+
+            $sql = "INSERT INTO photos (ID, URL, title, description, price, pID) VALUES ('". $idCount ."','\". $target_file .\"', '" .$title."', '".$description."', '".$price."', $pID)";
+            $db->query($sql);
+
+
         } else {
             echo "Sorry, there was an error uploading your file.";
             echo $target_file;

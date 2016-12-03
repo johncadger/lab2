@@ -19,6 +19,7 @@ echo "
 
 $term = $_POST["search"];
 
+//change to photos
 $sql = "SELECT * FROM blogArticles where articleID = '$term'";
 $result1 = $db->query($sql);
 
@@ -30,7 +31,8 @@ while($row = $result1->fetch_array())
     $articleID = $row['articleID'];
     $articleName = $row['articleName'];
     $articleAuthor = $row['articleAuthor'];
-
+    
+    //container with image, details and purchase option
     echo "<li><a href='blog/{$articleID}'>{$articleName}</a> by {$articleAuthor}</li>";
 }
 
