@@ -77,7 +77,7 @@ if (isset($_SESSION['photographer'])){
                     <button name=\"ID\" type=\"submit\" value=\"{$row['ID']}\">Update Photograph</button>
                 </form>
 
-                 <form action=\"edit_profile . php\" method=\"post\">
+                 <form action=\"edit_profile.php\" method=\"post\">
                     <button name=\"deleteID\" type=\"submit\" value=\"{$row['ID']}\">Delete</button>
                 </form>
             ";
