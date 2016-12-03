@@ -78,7 +78,7 @@ if (isset($_SESSION['photographer'])){
                 </form>
 
                 <form>
-                    <p><input type=\"submit\" value=\"Delete\"></p>
+                    <button name=\"deleteID\" type=\"submit\" value=\"{$row['ID']}\">Delete</button>
                 </form>
             ";
 
@@ -116,7 +116,12 @@ echo "</section>
 
 
 
-        } else{
+        } else if(isset($_POST['deleteID'])){
+
+            $deleteID = $_POST['deleteID'];
+
+            $sql = "DELETE FROM photos WHERE ID={$deleteID}";
+            $db->query($sql);
 
         }
 
