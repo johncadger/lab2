@@ -120,6 +120,15 @@ echo "</section>
 
             $deleteID = $_POST['deleteID'];
 
+            $sql = "SELECT * FROM photos WHERE ID = {$deleteID}";
+            $result = $db->query($sql);
+
+            while($row = $result->fetch_array())
+            {
+                if(realpath($row['URL']) and is_writable($row['URL']))
+                    delete($row['URL']);
+            }
+
             $sql = "DELETE FROM photos WHERE ID={$deleteID}";
             $db->query($sql);
 
