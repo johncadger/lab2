@@ -74,7 +74,8 @@ if (isset($_SESSION['photographer'])){
                     <label>Title: <input type=\"text\" name=\"title\" value=\"{$row['title']}\"></label></br>
                     <label>Description: <input type=\"text\" name=\"description\" value=\"{$row['description']}\"></label></br>
                     <label>Price: <input type=\"text\" name=\"price\" value=\"{$row['price']}\"></label></br>
-                    <p><input type=\"submit\" name='ID' value=\"Update Photograph\"></p>
+                    <input name='ID' value='{$row['ID']}'>
+                    <p><input type=\"submit\" value=\"Update Photograph\"></p>
                 </form>
 
                 <form>
