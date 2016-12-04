@@ -57,9 +57,12 @@ while($row = $result->fetch_array()){
         echo "
         <form action='purchase.php' method='post'>
             <button name=\"purchaseID\" type=\"submit\" value=\"{$row['ID']}\">Purchase</button>
+
         </form>
 
         ";
+
+        //<a href='purchase.php'>Purchase</a>
 
     }
 
