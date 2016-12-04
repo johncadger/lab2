@@ -6,6 +6,16 @@
  * Time: 07:14
  */
 
+include("header.php");
+
+include("dbconnect.php");
+
+session_start();
+
+$username = $_SESSION['username'];
+
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $ID = $_POST['purchaseID'];
