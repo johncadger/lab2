@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         while($row = $result->fetch_array()) {
 
-            echo"Congratulations, you've purchased {$row['title']}!";
+            echo"<p>Congratulations {$username}, you've purchased {$row['title']}!</p>";
 
             echo"<img src={$row['URL']} id=\"purchase_image\"/>";
         }
@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </section>
 
         <form action='purchase.php' method='post'>
-            <label><input type='text' name='ccard'</label>
+            <label>Credit Card: <input type='text' name='ccard'></label>
             <button name=\"purchaseID\" type=\"submit\" value=\"{$row['ID']}\">Confirm Purchase</button>
         </form>
         ";
@@ -66,9 +66,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 
-
-}else if ($_SERVER['REQUEST_METHOD'] === 'GET'){
-
-    echo $ID;
 
 }
